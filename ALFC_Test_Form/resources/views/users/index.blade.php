@@ -345,6 +345,29 @@
         text-decoration: underline;
     }
     /* login 2 ends */
+
+
+    /* table 1 starts */
+    table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 15px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        /* table1 ends */
     </style>
     <div class="container_field_form_design">
         <h2>Text Field Design </h2>
@@ -454,6 +477,53 @@
                 No account? <a href="">Sign up</a>
             </p>
         </form>
+
+    </div>
+
+    <div class="table-container" style="margin:10px;">
+
+    <table>
+    <tr>
+        <th>Support ID</th>
+        <th>Issue / Priority</th>
+        <th>Status</th>
+        <th>Assigned To</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Connection Problem <br><span style="color: red;">Priority: High</span></td>
+        <td>Open</td>
+        <td>John Doe</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Software Installation <br><span style="color: orange;">Priority: Medium</span></td>
+        <td>Closed</td>
+        <td>Jane Smith</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Hardware Failure <br><span style="color: red;">Priority: High</span></td>
+        <td>In Progress</td>
+        <td>Michael Johnson</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Network Configuration <br><span style="color: green;">Priority: Low</span></td>
+        <td>Open</td>
+        <td>Emily Williams</td>
+    </tr>
+    <!-- Add more rows as needed -->
+</table>
+
+
+
+
+
+
+
+
+
 
     </div>
 @endsection
