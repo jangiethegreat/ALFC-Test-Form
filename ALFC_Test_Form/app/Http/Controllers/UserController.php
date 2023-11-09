@@ -15,6 +15,10 @@ class UserController extends Controller
     {
         return view('users.login');
     }
+    public function register()
+    {
+        return view('users.register');
+    }
     public function index()
     {
         $users = User::all(); // Fetch all users from the database

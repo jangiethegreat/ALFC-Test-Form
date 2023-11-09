@@ -23,3 +23,4 @@ Route::get('/users/create', [UserController::class, 'create'])->name('users.crea
 Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/landing', [UserController::class, 'landingPage'])->name('users.landingPage');
 Route::get('/login', [UserController::class, 'login'])->name('users.login');
+Route::get('/register', [UserController::class, 'register'])->name('users.register');
