@@ -89,17 +89,18 @@
                                     <input type="password" style="width: 100%; height: 100%; border-radius: 9px; background: #F0F0F0; outline: none; border: none; padding-left: 85px;">
                                 </div>
 
-                <!-- PALITAN NG ROUTE TO -->
-                <form method="GET" action="{{ route('users.landingPage') }}">
-                    @csrf
-                    <button class="button" type="submit" style="width: 400px; height: 64px; flex-shrink: 0; border-radius: 18px; background: #AB0500; color: #ffffff; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal; margin-left: 30px; margin-top: 42px; border: none; outline: none;">
-                        LOGIN
-                    </button>
-                </form>
-            </div>
-            <p  style="width: 359px; height: 17px; flex-shrink: 0; color: #808080; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; text-align: center; display: flex; justify-content: center; margin-top: 12px;">
-                Don’t have an account yet? <a href="#" style="color: #D61812; font-weight: 600; text-decoration: none;">Register here.</a>
-            </p>
+                                    <!-- PALITAN NG ROUTE TO -->
+                                    <form method="GET" action="{{ route('users.landingPage') }}">
+                                        @csrf
+                                        <button class="button" type="submit" style="width: 400px; height: 64px; flex-shrink: 0; border-radius: 18px; background: #AB0500; color: #ffffff; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal; margin-left: 30px; margin-top: 42px; border: none; outline: none;">
+                                            LOGIN
+                                        </button>
+                                    </form>
+                                </div>
+                                
+                    <p  style="width: 359px; height: 17px; flex-shrink: 0; color: #808080; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; text-align: center; display: flex; justify-content: center; margin-top: 12px;">
+                        Don’t have an account yet? <a href="#" style="color: #D61812; font-weight: 600; text-decoration: none;">Register here.</a>
+                    </p>
 
         </div>
     </div>
