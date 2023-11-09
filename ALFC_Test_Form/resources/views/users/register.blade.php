@@ -111,7 +111,7 @@
                                     <form method="GET" action="{{ route('users.landingPage') }}">
                                         @csrf
                                         <button class="button" type="submit" style="width: 400px; height: 45px; flex-shrink: 0; border-radius: 18px; background: #AB0500; color: #ffffff; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal; margin-left: 30px; margin-top: 42px; border: none; outline: none;">
-                                            LOGIN
+                                            REGISTER
                                         </button>
                                     </form>
                                 </div>
