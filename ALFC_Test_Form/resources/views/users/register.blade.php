@@ -117,7 +117,7 @@
                                 </div>
                                 
                     <p  style="width: 359px; height: 17px; flex-shrink: 0; color: #808080; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; text-align: center; display: flex; justify-content: center; margin-top: 12px;">
-                        Don’t have an account yet? <a href="#" style="color: #D61812; font-weight: 600; text-decoration: none;">Register here.</a>
+                        Don’t have an account yet? <a href="#" style="color: #D61812; font-weight: 600; text-decoration: none;">Login here.</a>
                     </p>
 
         </div>
