@@ -32,7 +32,7 @@
         .col-md-4{
             overflow:hidden;
 
-            
+
         }
         input[type="text"],
         input[type="password"] {
@@ -68,26 +68,26 @@
             <img src="{{ asset('assets/ALFC Logo.png') }}" style="margin-top: 10px; " />
             
             <div>
-            <p id="login-text">
-                LOGIN TO YOUR ACCOUNT <br><span id="login-desc"> Please enter your credentials to login in the system.</span>
-            </p>
-                <p class="description_tag" style="height: 17px; flex-shrink: 0; color: #585858; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 500; line-height: normal; margin-left: 30px; margin-top: 40px;">
-                    Username
+                <p id="login-text">
+                    LOGIN TO YOUR ACCOUNT <br><span id="login-desc"> Please enter your credentials to login in the system.</span>
                 </p>
+                    <p class="description_tag" style="height: 17px; flex-shrink: 0; color: #585858; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 500; line-height: normal; margin-left: 30px; margin-top: 40px;">
+                        Username
+                    </p>
 
-                <div style="position: relative; display: inline-block; width: 400px; height: 64px; margin-left: 30px;">
-                    <img src="{{ asset('assets/Person.png') }}" style="width: 51px; height: 51px; flex-shrink: 0; position: absolute; top: 50%; left: 5%; transform: translate(0, -50%);">
-                    <input type="text" style="width: 100%; height: 100%; border-radius: 9px; background: #F0F0F0; outline: none; border: none; padding-left: 85px;">
-                </div>
+                        <div style="position: relative; display: inline-block; width: 400px; height: 64px; margin-left: 30px;">
+                            <img src="{{ asset('assets/Person.png') }}" style="width: 51px; height: 51px; flex-shrink: 0; position: absolute; top: 50%; left: 5%; transform: translate(0, -50%);">
+                            <input type="text" style="width: 100%; height: 100%; border-radius: 9px; background: #F0F0F0; outline: none; border: none; padding-left: 85px;">
+                        </div>
 
-                <p style="height: 17px; flex-shrink: 0; color: #585858; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 500; line-height: normal; margin-left: 30px; margin-top: 10px;">
-                    Password
-                </p>
+                            <p style="height: 17px; flex-shrink: 0; color: #585858; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 500; line-height: normal; margin-left: 30px; margin-top: 10px;">
+                                Password
+                            </p>
 
-                <div style="position: relative; display: inline-block; width: 400px; height: 64px; margin-left: 30px;">
-                    <img src="{{ asset('assets/Padlock Outline.png') }}" style="width: 48px; height: 39px; flex-shrink: 0; position: absolute; top: 50%; left: 5%; transform: translate(0, -50%);">
-                    <input type="password" style="width: 100%; height: 100%; border-radius: 9px; background: #F0F0F0; outline: none; border: none; padding-left: 85px;">
-                </div>
+                                <div style="position: relative; display: inline-block; width: 400px; height: 64px; margin-left: 30px;">
+                                    <img src="{{ asset('assets/Padlock Outline.png') }}" style="width: 48px; height: 39px; flex-shrink: 0; position: absolute; top: 50%; left: 5%; transform: translate(0, -50%);">
+                                    <input type="password" style="width: 100%; height: 100%; border-radius: 9px; background: #F0F0F0; outline: none; border: none; padding-left: 85px;">
+                                </div>
 
                 <!-- PALITAN NG ROUTE TO -->
                 <form method="GET" action="{{ route('users.landingPage') }}">
