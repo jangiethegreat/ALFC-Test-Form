@@ -4,7 +4,7 @@
 
 <style>
     /* Default styles */
-    #login-text {
+    #register-text {
         flex-shrink: 0;
         color: #D61812;
         font-family: Montserrat;
@@ -16,7 +16,7 @@
         margin-left: 30px;
     }
 
-    #login-desc {
+    #register-desc {
         color: #868686;
         font-family: Montserrat;
         font-size: 13px;
@@ -30,7 +30,7 @@
 
     /* Media query for smaller screens */
     @media only screen and (max-width: 768px) {
-        .col-md-4{
+        .col-md-4 {
             overflow-x: hidden; /* Hide horizontal scrollbar */
             overflow-y: auto; /* Enable vertical scrollbar */
         }
@@ -46,12 +46,12 @@
             max-width: 365px; /* You can adjust the max-width value as per your requirement */
         }
 
-        #login-text {
+        #register-text {
             max-width: 365px;
             font-size: 23px; /* Adjust the font size for smaller screens */
         }
 
-        #login-desc {
+        #register-desc {
             font-size: 12px; /* Adjust the font size for smaller screens */
         }
     }
@@ -69,10 +69,10 @@
             <img src="{{ asset('assets/ALFC Logo.png') }}" style="margin-top: 10px; " />
             
             <div>
-                <p id="login-text">
-                REGISTER AN ACCOUNT <br><span id="login-desc"> Please enter your details to create an account in the system</span>
+                <p id="register-text">
+                REGISTER AN ACCOUNT <br><span id="register-desc"> Please enter your details to create an account in the system</span>
                 </p>
-                    <p id="description_tag" style="height: 17px; flex-shrink: 0; color: #585858; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 500; line-height: normal; margin-left: 30px; margin-top: 40px;">
+                    <p class="description_tag" style="height: 17px; flex-shrink: 0; color: #585858; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 500; line-height: normal; margin-left: 30px; margin-top: 40px;">
                         Username
                     </p>
 
@@ -117,7 +117,7 @@
                                 </div>
                                 
                     <p  style="width: 359px; height: 17px; flex-shrink: 0; color: #808080; font-family: Montserrat; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; text-align: center; display: flex; justify-content: center; margin-top: 12px;">
-                        Don’t have an account yet? <a href="#" style="color: #D61812; font-weight: 600; text-decoration: none;">Login here.</a>
+                        Already have an account? <a href="{{ route('users.login') }}" style="color: #D61812; font-weight: 600; text-decoration: none;">Login here.</a>
                     </p>
 
         </div>
