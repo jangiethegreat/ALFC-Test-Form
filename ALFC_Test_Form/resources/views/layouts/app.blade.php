@@ -7,9 +7,10 @@
     <!-- Include Bootstrap CSS from a CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body style="background-color: #f8f8f8;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body >
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Your App Name</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,9 +25,9 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
 
-    <div class="container mt-4">
+    <div >
         @yield('content')
     </div>
 
