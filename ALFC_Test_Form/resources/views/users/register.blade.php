@@ -31,9 +31,8 @@
     /* Media query for smaller screens */
     @media only screen and (max-width: 768px) {
         .col-md-4{
-            overflow:hidden;
-
-
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            overflow-y: auto; /* Enable vertical scrollbar */
         }
         input[type="text"],
         input[type="password"] {
@@ -42,6 +41,7 @@
         }
 
         .button {
+            margin-top: 30px;
             width: 100%;
             max-width: 365px; /* You can adjust the max-width value as per your requirement */
         }
@@ -110,7 +110,7 @@
                                     <!-- PALITAN NG ROUTE TO -->
                                     <form method="GET" action="{{ route('users.landingPage') }}">
                                         @csrf
-                                        <button class="button" type="submit" style="width: 400px; height: 45px; flex-shrink: 0; border-radius: 18px; background: #AB0500; color: #ffffff; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal; margin-left: 30px; margin-top: 42px; border: none; outline: none;">
+                                        <button class="button" type="submit" style="width: 400px; height: 45px; flex-shrink: 0; border-radius: 18px; background: #AB0500; color: #ffffff; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal; margin-left: 30px; margin-top: 40px; border: none; outline: none;">
                                             REGISTER
                                         </button>
                                     </form>
