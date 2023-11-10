@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class UserController extends Controller
+
 {
+
+    public function homePage()
+    {
+        return view('users.homepage');
+    }
     public function landingPage()
     {
         return view('users.landingPage');
