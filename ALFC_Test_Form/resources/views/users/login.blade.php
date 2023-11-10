@@ -30,7 +30,8 @@
     /* Media query for smaller screens */
     @media only screen and (max-width: 768px) {
         .col-md-4{
-            overflow:hidden;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            overflow-y: auto; /* Enable vertical scrollbar */
 
 
         }

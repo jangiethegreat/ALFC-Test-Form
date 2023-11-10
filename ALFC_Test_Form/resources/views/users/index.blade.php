@@ -367,6 +367,7 @@
             background-color: #4CAF50;
             color: white;
         }
+        
         /* table1 ends */
     </style>
     <div class="container_field_form_design">
@@ -482,39 +483,62 @@
 
     <div class="table-container" style="margin:10px;">
 
-    <table>
-    <tr>
-        <th>Support ID</th>
-        <th>Issue / Priority</th>
-        <th>Status</th>
-        <th>Assigned To</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Connection Problem <br><span style="color: red;">Priority: High</span></td>
-        <td>Open</td>
-        <td>John Doe</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Software Installation <br><span style="color: orange;">Priority: Medium</span></td>
-        <td>Closed</td>
-        <td>Jane Smith</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Hardware Failure <br><span style="color: red;">Priority: High</span></td>
-        <td>In Progress</td>
-        <td>Michael Johnson</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Network Configuration <br><span style="color: green;">Priority: Low</span></td>
-        <td>Open</td>
-        <td>Emily Williams</td>
-    </tr>
-    <!-- Add more rows as needed -->
-</table>
+    <table style="text-align: center;">
+        <tr>
+            <th style="text-align: center;">Support ID</th>
+            <th style="text-align: center;">Issue / Priority</th>
+            <th style="text-align: center;">Status</th>
+            <th style="text-align: center;">Assigned To</th>
+            <th style="text-align: center;">Action</th> <!-- New column for Actions -->
+        </tr>
+        <tr>
+            <td style="text-align: center;">1</td>
+            <td style="text-align: center;">Connection Problem <br><span style="color: red;">Priority: High</span></td>
+            <td style="text-align: center;">Open</td>
+            <td style="text-align: center;">John Doe</td>
+            <td style="text-align: center;">
+                <a href="#" style="color: green; text-decoration: none;">Done</a>
+                <a href="#" style="color: red; text-decoration: none; margin-left: 5px;">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">2</td>
+            <td style="text-align: center;">Software Installation <br><span style="color: orange;">Priority: Medium</span></td>
+            <td style="text-align: center;">Closed</td>
+            <td style="text-align: center;">Jane Smith</td>
+            <td style="text-align: center;">
+                <a href="#" style="color: green; text-decoration: none;">Done</a>
+                <a href="#" style="color: red; text-decoration: none; margin-left: 5px;">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">3</td>
+            <td style="text-align: center;">Hardware Failure <br><span style="color: red;">Priority: High</span></td>
+            <td style="text-align: center;">In Progress</td>
+            <td style="text-align: center;">Michael Johnson</td>
+            <td style="text-align: center;">
+                <a href="#" style="color: green; text-decoration: none;">Done</a>
+                <a href="#" style="color: red; text-decoration: none; margin-left: 5px;">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">4</td>
+            <td style="text-align: center;">Network Configuration <br><span style="color: green;">Priority: Low</span></td>
+            <td style="text-align: center;">Open</td>
+            <td style="text-align: center;">Emily Williams</td>
+            <td style="text-align: center;">
+                <a href="#" style="color: green; text-decoration: none;">Done</a>
+                <a href="#" style="color: red; text-decoration: none; margin-left: 5px;">Delete</a>
+            </td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+
+
+
+    </div>
+
+
 
 
 
