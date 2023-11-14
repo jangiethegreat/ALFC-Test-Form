@@ -4,10 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\App;
 
 class UserController extends Controller
 
 {
+    public function generatePdf()
+    {
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadHTML('<h1>Hello World</h1>');
+        return $pdf->stream();
+    }
 
     public function homePage()
     {

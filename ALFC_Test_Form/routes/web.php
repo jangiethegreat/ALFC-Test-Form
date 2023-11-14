@@ -25,3 +25,6 @@ Route::get('/landing', [UserController::class, 'landingPage'])->name('users.land
 Route::get('/login', [UserController::class, 'login'])->name('users.login');
 Route::get('/register', [UserController::class, 'register'])->name('users.register');
 Route::get('/homepage', [UserController::class, 'homepage'])->name('users.homepage');
+
+//PDF For AgentForm
+Route::get('/generate-pdf', [UserController::class, 'generatePdf'])->name('generate-pdf');
