@@ -5,10 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\App;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class UserController extends Controller
 
 {
+    public function agentPdf()
+    {
+        // Load the view
+    $pdf = Pdf::loadView('users.agentpdf');
+
+    // Set paper to short bond paper (8.5x11 inches)
+    $customPaper = array(0,0,360,360);
+    $pdf->setPaper('A4', 'portrait');
+
+    // Return the PDF as stream
+    return $pdf->stream();
+    }
+
     public function generatePdf()
     {
         $pdf = App::make('dompdf.wrapper');

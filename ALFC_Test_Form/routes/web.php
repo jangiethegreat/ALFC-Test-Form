@@ -28,3 +28,4 @@ Route::get('/homepage', [UserController::class, 'homepage'])->name('users.homepa
 
 //PDF For AgentForm
 Route::get('/generate-pdf', [UserController::class, 'generatePdf'])->name('generate-pdf');
+Route::get('/agent-pdf', [UserController::class, 'agentPdf'])->name('users.agentpdf');
