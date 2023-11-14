@@ -34,6 +34,10 @@
       justify-content: flex-start;
       margin:60px;
     }
+    .card:hover {
+        transform: scale(1.05); /* Increase the scale value for a larger growth */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
+    }
     .alfc-text {
     color: #2C2C2C;
     font-size: 100px;
@@ -102,6 +106,10 @@
         border-radius: 30px; /* Add or adjust the border-radius as needed */
         margin: 50px; /* Add margin between cards */
         width: 350px;
+    }
+    .card:hover {
+        transform: scale(1.00); /* Increase the scale value for a larger growth */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
     }
     .dealer-image {
         margin-top:-53px;
