@@ -6,22 +6,26 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\App;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Http\Controllers\File;
 
 class UserController extends Controller
 
 {
     public function agentPdf()
-    {
-        // Load the view
-    $pdf = Pdf::loadView('users.agentpdf');
+{
+    $imagePath = public_path('assets/3.png');
+    $imageData = \File::get($imagePath);
+    $base64Image = 'data:image/png;base64,' . base64_encode($imageData);
 
-    // Set paper to short bond paper (8.5x11 inches)
-    $customPaper = array(0,0,360,360);
+    // Load the view with the image data
+    $pdf = PDF::loadView('users.agentpdf', compact('base64Image'));
+    
+    // Set paper to A4, portrait orientation
     $pdf->setPaper('A4', 'portrait');
 
     // Return the PDF as stream
     return $pdf->stream();
-    }
+}
 
     public function generatePdf()
     {

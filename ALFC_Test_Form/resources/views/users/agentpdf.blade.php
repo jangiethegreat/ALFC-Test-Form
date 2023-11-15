@@ -3,7 +3,7 @@
 <title>agent form</title>
 <meta name="author" content="Microsoft Office User"/>
 <style type="text/css"> * {margin:0; padding:0; text-indent:0; }
- .s1 { color: black; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 28pt; float:center; margin-top:60px;}
+ .s1 { color: black; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 28pt; float:center; margin-top:50px;}
  .s2 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
  .s3 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9.5pt; }
  .s4 { color: black; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
@@ -14,12 +14,12 @@
  p { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; margin:0pt; }
  a { color: #0562C1; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10pt; }
  .s9 { color: #F00; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
- table, tbody {vertical-align: top; overflow: visible; }
+ table, tbody {vertical-align: top; overflow: visible; padding:2.5px;  }
 </style>
 </head>
 <body>
     <p style="text-indent: 0pt;text-align: left;"><br/></p>
-    <table style="border-collapse:collapse;margin-left:1px" cellspacing="0"><tr style="height:108pt">
+    <table style="border-collapse:collapse;margin-left:1px;" cellspacing="0"><tr style="height:108pt">
         <td style="width:500pt; border-top-style:solid; border-top-width:1pt; border-left-style:solid; border-left-width:1pt; border-bottom-style:solid; border-bottom-width:1pt; border-right-style:solid; border-right-width:1pt;" colspan="3">
             <div style="display: flex; align-items: center; justify-content: flex-end;">
                 <!-- Content on the left side -->
@@ -29,15 +29,15 @@
                 </div>
         
                 <!-- 2x2 picture with border on the right -->
-                <div style="width: 2in; height: 2in; 
-                border: 1px solid #000; 
-                text-align: center; 
-                display: flex; 
-                align-items: center; 
-                justify-content:flex-end; 
-                margin: 5px; 
-                margin-left:585px;">                  
-                      2x2
+                <div style="width: 1.5in; height: 1.5in; 
+                    border: 1px solid #000; 
+                    text-align: center; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: flex-end; 
+                    margin: 5px; 
+                    margin-left: 630px;">
+                    <img src="{{ $base64Image }}" style="height:100%; weight:100%;"alt="2x2 Image" />
                 </div>
                 
             </div>
@@ -63,7 +63,7 @@
     </td>
 </tr>
 <tr style="height:15pt">
-    <td style="width:245pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="2"><p class="s3" style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Contact Number:<SPAN style="font-weight: bold;">CODE VARIABLE</SPAN> <span class="s3" style="padding-left: 100pt;text-indent: 0pt;line-height: 13pt;text-align: left;">SSS No.:<SPAN style="font-weight: bold;">CODE VARIABLE</SPAN></span></p>
+    <td style="width:245pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt" colspan="2"><p class="s3" style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Contact Number:<SPAN style="font-weight: bold;">CODE VARIABLE</SPAN> <span class="s3" style="padding-left:50pt;text-indent: 0pt;line-height: 13pt;text-align: left; ">SSS No.:<SPAN style="font-weight: bold; font-size:8pt;">CODE VARIABLE</SPAN></span></p>
     </td>
     <td style="width:245pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s3" style="padding-left: 95pt;padding-right: 50pt;text-indent: 0pt;line-height: 13pt;text-align: center;">TIN:<SPAN style="font-weight: bold;">CODE VARIABLE</SPAN></p>
@@ -139,10 +139,10 @@
 </tr>
 <tr style="height:41pt">
     <td style="width:245pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="2">
-        <p style="text-indent: 0pt;text-align: left;"><br/></p>
+        <p style="text-indent: 0pt;text-align:  center;"><br/>Agent Signature Variable</p>
     </td>
     <td style="width:245pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
-            <p style="text-indent: 0pt;text-align: left;"><br/></p>
+            <p style="text-indent: 0pt;text-align: center;"><br/>Sales Associate Signature Variable</p>
         </td>
     </tr>
     <tr style="height:15pt">
