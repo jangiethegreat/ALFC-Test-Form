@@ -29,3 +29,6 @@ Route::get('/homepage', [UserController::class, 'homepage'])->name('users.homepa
 //PDF For AgentForm
 Route::get('/generate-pdf', [UserController::class, 'generatePdf'])->name('generate-pdf');
 Route::get('/agent-pdf', [UserController::class, 'agentPdf'])->name('users.agentpdf');
+
+//form for Agent 
+Route::get('/agent-form', [UserController::class, 'agentForm'])->name('users.agentForm');

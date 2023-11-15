@@ -11,6 +11,11 @@ use App\Http\Controllers\File;
 class UserController extends Controller
 
 {
+    public function agentForm()
+    {
+        return view("users.agentForm");
+    }
+
     public function agentPdf()
 {
     $imagePath = public_path('assets/3.png');
