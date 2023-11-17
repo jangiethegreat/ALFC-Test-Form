@@ -301,7 +301,7 @@
                         </div>
 
                         <div class ="row row-space">
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Telephone</label>
                                 <input type="text" id="telephone" name="telephone" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('telephone')
