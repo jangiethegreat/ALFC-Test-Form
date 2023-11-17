@@ -187,7 +187,7 @@
                             @enderror
                         </div>
 
-                        <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                        <div class="col-md-4 mb-3">
                             <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Civil Status</label>
                             <input type="text" id="civil_status" name="civil_status" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('civil_status')
@@ -198,7 +198,7 @@
                         </div>
 
                         <div class ="row row-space">
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br>Name of Spouse (maiden name)<br>First Name</label>
                                 <input type="text" id="spouse_first_name" name="spouse_first_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('spouse_first_name')
@@ -207,7 +207,7 @@
                             </div>
 
 
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Last Name spouse</label>
                                 <input type="text" id="last_name_spouse" name="last_name_spouse" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('last_name_spouse')
