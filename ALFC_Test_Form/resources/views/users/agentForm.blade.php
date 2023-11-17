@@ -38,20 +38,6 @@
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </style>
 
     <div class="container" >
