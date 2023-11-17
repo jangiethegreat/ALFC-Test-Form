@@ -238,7 +238,7 @@
 
 
                         <div class ="row row-space">
-                        <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                        <div class="col-md-4 mb-3" >
                             <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Bank Name</label>
                             <input type="text" id="bank_name" name="bank_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('bank_name')
@@ -247,7 +247,7 @@
                         </div>
 
 
-                        <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                        <div class="col-md-4 mb-3" >
                             <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Account Number</label>
                             <input type="text" id="account_number" name="account_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('account_number')
@@ -269,7 +269,7 @@
                         </div>
 
                         <div class ="row row-space">
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Name of Company</label>
                                 <input type="text" id="company_name" name="company_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('company_name')
@@ -278,7 +278,7 @@
                             </div>
 
 
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Job Title</label>
                                 <input type="text" id="job_title" name="job_title" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('job_title')
