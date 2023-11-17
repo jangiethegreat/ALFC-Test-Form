@@ -39,15 +39,8 @@
     }
 }
 
-@media screen and (min-width: 1920px) {
-.container{
-    transform: scale(1.25);
-    position: center;
-    margin-top: 200px;
 
 
-}
-}
 
 
 
