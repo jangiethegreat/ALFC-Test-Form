@@ -434,7 +434,7 @@
 
 <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
             <div style="display: flex; justify-content: flex-end; margin-top:50px; margin-bottom:10px;">
             
                         <button style="border-radius: 18px; background: transparent; width: 203px; height: 39px; flex-shrink: 0; border: none; outline: none;">
