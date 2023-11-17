@@ -81,7 +81,7 @@
 
 
                         <div class ="row row-space">
-                            <div class="col-md-4 mb-3" style="margin-right:-11px;">
+                            <div class="col-md-4 mb-3">
                             <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">First Name</label>
                             <input type="text" id="first_name" name="first_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('first_name')
@@ -89,7 +89,7 @@
                                 @enderror
                             </div>
 
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3">
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Last Name</label>
                                 <input type="text" id="last_name" name="last_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                     @error('last_name')
@@ -98,7 +98,7 @@
                             </div>
 
 
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Middle Name</label>
                                 <input type="text" id="middle_name" name="middle_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                     @error('middle_name')
@@ -122,7 +122,7 @@
 
 
                         <div class ="row row-space">
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Contact Number</label>
                                 <input type="text" id="contact_number" name="contact_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('contact_number')
@@ -131,7 +131,7 @@
                             </div>
 
 
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3">
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">SSS No.</label>
                                 <input type="text" id="sss_number" name="sss_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('sss_number')
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class ="row row-space">
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Date of Birth</label>
                                 <input type="text" id="date_of_birth" name="date_of_birth" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('date_of_birth')
@@ -156,7 +156,7 @@
                                 @enderror
                             </div>
 
-                            <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                            <div class="col-md-4 mb-3" >
                                 <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Place of Birth</label>
                                 <input type="text" id="place_of_birth" name="place_of_birth" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('place_of_birth')
@@ -179,7 +179,7 @@
                         </div>
 
                         <div class ="row row-space">
-                        <div class="col-md-4 mb-3" style="margin-right: -11px;">
+                        <div class="col-md-4 mb-3" >
                             <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Sex</label>
                             <input type="text" id="sex" name="sex" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('sex')
