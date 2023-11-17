@@ -187,7 +187,7 @@
 
 
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Last Name spouse</label>
+                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Last Name (Spouse)</label>
                                 <input type="text" id="last_name_spouse" name="last_name_spouse" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('last_name_spouse')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -196,7 +196,7 @@
 
 
                             <div class="col-md-4 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Middle Name Spouse</label>
+                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Middle Name (Spouse)</label>
                                 <input type="text" id="middle_name_spouse" name="middle_name_spouse" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('middle_name_spouse')
                                     <div class="alert alert-danger">{{ $message }}</div>
