@@ -2,35 +2,32 @@
 
 @section('content')
 <style>
+
+
 .custom-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 19.048px;
-  flex-shrink: 0;
-  background-color: #DA2520;
-  border: none;
-  color: white;
-  font-size: 14px;
-  padding-left: 5px;
-}
+  display: flex; align-items: center; justify-content: center; width: 80px; height: 19.048px; flex-shrink: 0; background-color: #DA2520; border: none; color: white; font-size: 14px; padding-left: 5px;
+                }
 
 .custom-button .icon {
-  width: 15px; /* Adjust the width and height of your icon */
-  height: 15px;
-  margin-right: -5px;
-  vertical-align: middle;
-}
+  width: 15px; height: 15px; margin-right: -5px; vertical-align: middle;
+                }
 .custom-button .button-text {
-  color: #FFF;
-  font-size: 8px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  width: 100%;
-  height: 10px;
-  flex-shrink: 0;
+    color: #FFF; font-size: 8px; font-style: normal; font-weight: 400; line-height: normal; width: 100%; height: 10px; flex-shrink: 0;
+                }
+.agent-header   { 
+    color: #AB3333; font-family: Montserrat; font-size: 40px; font-style: normal; font-weight: 1000; line-height: normal; text-align: center; margin-top: 30px;   
+}        
+.agent-profile{
+    color: #4A4A4A; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 500; line-height: normal; height: 23px; flex-shrink: 0; margin-top: 56px; margin-bottom: 56px;
+} 
+.agent-profile-desc{
+    width: 577px; flex-shrink: 0; color: #414141; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 500; line-height: normal;
+}
+.botborder{
+    border-bottom: 1px solid #E2E2E2; 
+}
+.input-label{
+    color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;
 }
 @media screen and (min-width: 900px) {
     .container{
@@ -38,30 +35,22 @@
 
     }
 }
+
 </style>
 
-    <div class="container" >
+    <div class="container" > 
         <div class="row justify-content-center" >
             <div class="col-md-10">
                 <div class="card" >
                     <div class="card-body">
-                        <h2 style="color: #AB3333; font-family: Montserrat; font-size: 40px; font-style: normal; font-weight: 1000; line-height: normal; text-align: center; margin-top: 30px;">
-                            Agent’s Application Form
-                        </h2>
+                        <h2 class="agent-header"> Agent’s Application Form </h2>
                         <div>
-                        <p style="color: #4A4A4A; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 500; line-height: normal; height: 23px; flex-shrink: 0; margin-top: 56px; margin-bottom: 56px; ">
-                            Agent Profile <br>
-                            <span style="width: 577px; flex-shrink: 0; color: #414141; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 500; line-height: normal;">
-                                Please input the personal information of the agent in the designated fields below.
-                            </span>                            
-                        </p>
-                        <p class="col-md-12" style="border-bottom: 1px solid #E2E2E2; "></p>
+                        <p class="agent-profile">Agent Profile <br><span class="agent-profile-desc">Please input the personal information of the agent in the designated fields below.</span></p>
+                        <p class="botborder col-md-12"></p>
                         </div>
-
-
                         <div class ="row row-space">
                             <div class="col-md-4 mb-3">
-                            <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">First Name</label>
+                            <label class="input-label label">First Name</label>
                             <input type="text" id="first_name" name="first_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('first_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -69,7 +58,7 @@
                             </div>
 
                             <div class="col-md-4 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Last Name</label>
+                                <label class="input-label label">Last Name</label>
                                 <input type="text" id="last_name" name="last_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                     @error('last_name')
                                         <div class="alert alert-danger">{{ $message }}</div>
@@ -78,7 +67,7 @@
 
 
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Middle Name</label>
+                                <label class="input-label label">Middle Name</label>
                                 <input type="text" id="middle_name" name="middle_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                     @error('middle_name')
                                         <div class="alert alert-danger">{{ $message }}</div>
@@ -91,7 +80,7 @@
 
                         <div class ="row row-space">
                             <div class="col-md-12 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Address</label>
+                                <label class="input-label label">Address</label>
                                 <input type="text" id="address" name="address" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                     @error('address')
                                         <div class="alert alert-danger">{{ $message }}</div>
@@ -102,7 +91,7 @@
 
                         <div class ="row row-space">
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Contact Number</label>
+                                <label class="input-label label">Contact Number</label>
                                 <input type="text" id="contact_number" name="contact_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('contact_number')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -111,7 +100,7 @@
 
 
                             <div class="col-md-4 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">SSS No.</label>
+                                <label class="input-label label">SSS No.</label>
                                 <input type="text" id="sss_number" name="sss_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('sss_number')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -119,7 +108,7 @@
                             </div>
 
                             <div class="col-md-4 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">TIN</label>
+                                <label class="input-label label">TIN</label>
                                 <input type="text" id="tin_number" name="tin_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('tin_number')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -128,7 +117,7 @@
                         </div>
                         <div class ="row row-space">
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Date of Birth</label>
+                                <label class="input-label label">Date of Birth</label>
                                 <input type="text" id="date_of_birth" name="date_of_birth" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('date_of_birth')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -136,7 +125,7 @@
                             </div>
 
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Place of Birth</label>
+                                <label class="input-label label">Place of Birth</label>
                                 <input type="text" id="place_of_birth" name="place_of_birth" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('place_of_birth')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -149,7 +138,7 @@
 
                         <div class ="row row-space">
                             <div class="col-md-12 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Email Address</label>
+                                <label class="input-label label">Email Address</label>
                                 <input type="text" id="email_address" name="email_address" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('email_address')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -159,7 +148,7 @@
 
                         <div class ="row row-space">
                         <div class="col-md-4 mb-3" >
-                            <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Sex</label>
+                            <label class="input-label label">Sex</label>
                             <input type="text" id="sex" name="sex" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('sex')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -167,7 +156,7 @@
                         </div>
 
                         <div class="col-md-4 mb-3">
-                            <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Civil Status</label>
+                            <label class="input-label label">Civil Status</label>
                             <input type="text" id="civil_status" name="civil_status" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('civil_status')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -178,7 +167,7 @@
 
                         <div class ="row row-space">
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br>Name of Spouse (maiden name)<br>First Name</label>
+                                <label class="input-label label"><br>Name of Spouse (maiden name)<br>First Name</label>
                                 <input type="text" id="spouse_first_name" name="spouse_first_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('spouse_first_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -187,7 +176,7 @@
 
 
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Last Name (Spouse)</label>
+                                <label class="input-label label"><br><br>Last Name (Spouse)</label>
                                 <input type="text" id="last_name_spouse" name="last_name_spouse" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('last_name_spouse')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -196,7 +185,7 @@
 
 
                             <div class="col-md-4 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;"><br><br>Middle Name (Spouse)</label>
+                                <label class="input-label label"><br><br>Middle Name (Spouse)</label>
                                 <input type="text" id="middle_name_spouse" name="middle_name_spouse" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('middle_name_spouse')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -207,7 +196,7 @@
 
                         <div class ="row row-space">
                         <div class="col-md-4 mb-3">
-                            <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Existing Insurance Provider</label>
+                            <label class="input-label label">Existing Insurance Provider</label>
                             <input type="text" id="existing_insurance_provider" name="existing_insurance_provider" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('existing_insurance_provider')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -218,7 +207,7 @@
 
                         <div class ="row row-space">
                         <div class="col-md-4 mb-3" >
-                            <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Bank Name</label>
+                            <label class="input-label label">Bank Name</label>
                             <input type="text" id="bank_name" name="bank_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('bank_name')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -227,7 +216,7 @@
 
 
                         <div class="col-md-4 mb-3" >
-                            <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Account Number</label>
+                            <label class="input-label label">Account Number</label>
                             <input type="text" id="account_number" name="account_number" class="form-control" style=" height: 38px; background: #F4F4F4;">
                             @error('account_number')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -238,18 +227,14 @@
                         </div>
 
                         <div>
-                        <p style="color: #4A4A4A; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 500; line-height: normal; height: 23px; flex-shrink: 0; margin-top: 56px; margin-bottom: 56px; ">
-                        Present Job <br>
-                            <span style="width: 577px; flex-shrink: 0; color: #414141; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 500; line-height: normal;">
-                            Please provide the current job information for the agent in the fields below.
-                            </span>                            
+                        <p class="agent-profile">Present Job <br><span class="agent-profile-desc">Please provide the current job information for the agent in the fields below.</span>                            
                         </p>
-                        <p class="col-md-12" style="border-bottom: 1px solid #E2E2E2;"></p>
+                        <p class="botborder col-md-12"></p>
                         </div>
 
                         <div class ="row row-space">
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Name of Company</label>
+                                <label class="input-label label">Name of Company</label>
                                 <input type="text" id="company_name" name="company_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('company_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -258,7 +243,7 @@
 
 
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Job Title</label>
+                                <label class="input-label label">Job Title</label>
                                 <input type="text" id="job_title" name="job_title" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('job_title')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -270,7 +255,7 @@
 
                         <div class ="row row-space">
                             <div class="col-md-12 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Business Address</label>
+                                <label class="input-label label">Business Address</label>
                                 <input type="text" id="business_address" name="business_address" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('business_address')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -281,7 +266,7 @@
 
                         <div class ="row row-space">
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Telephone</label>
+                                <label class="input-label label">Telephone</label>
                                 <input type="text" id="telephone" name="telephone" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('telephone')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -290,7 +275,7 @@
 
 
                             <div class="col-md-4 mb-3" >
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Phone Number</label>
+                                <label class="input-label label">Phone Number</label>
                                 <input type="text" id="phone_number_company" name="phone_number_company" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('phone_number_company')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -299,7 +284,7 @@
 
 
                             <div class="col-md-4 mb-3">
-                                <label class="label" style="color: #626262; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">Fax</label>
+                                <label class="input-label label">Fax</label>
                                 <input type="text" id="fax" name="fax" class="form-control" style=" height: 38px; background: #F4F4F4;">
                                 @error('fax')
                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -309,12 +294,9 @@
                         </div>
 
                         <div>
-                        <p style="color: #4A4A4A; font-family: Montserrat; font-size: 20px; font-style: normal; font-weight: 500; line-height: normal; height: 23px; flex-shrink: 0; margin-top: 56px; margin-bottom: 56px; ">
-                            Requirements <br>
-                            <span style="width: 577px; flex-shrink: 0; color: #414141; font-family: Montserrat; font-size: 10px; font-style: normal; font-weight: 500; line-height: normal;">
-                            Please verify that the agent’s fulfilled requirements are marked as checked.                            </span>                            
+                        <p class="agent-profile">Requirements <br><span class="agent-profile-desc">Please verify that the agent’s fulfilled requirements are marked as checked.</span>                            
                         </p>
-                        <p  class="col-md-12" style="border-bottom: 1px solid #E2E2E2; "></p>
+                        <p  class="botborder col-md-12"></p>
                         </div>
 
                         <div class="row row-space">
