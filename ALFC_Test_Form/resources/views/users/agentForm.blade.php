@@ -32,11 +32,12 @@
 @media screen and (min-width: 900px) {
     .container{
     margin-top: 20px;
-
+ 
+    
     }
 }
 
-</style>
+</style>s
 
     <div class="container" > 
         <div class="row justify-content-center" >
