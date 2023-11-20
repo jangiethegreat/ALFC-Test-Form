@@ -16,21 +16,23 @@ class UserController extends Controller
         return view("users.agentForm");
     }
 
+    //pdf logic start
     public function agentPdf()
-{
-    $imagePath = public_path('assets/3.png');
-    $imageData = \File::get($imagePath);
-    $base64Image = 'data:image/png;base64,' . base64_encode($imageData);
+    {
+        $imagePath = public_path('assets/3.png');
+        $imageData = \File::get($imagePath);
+        $base64Image = 'data:image/png;base64,' . base64_encode($imageData);
 
-    // Load the view with the image data
-    $pdf = PDF::loadView('users.agentpdf', compact('base64Image'));
-    
-    // Set paper to A4, portrait orientation
-    $pdf->setPaper('A4', 'portrait');
+        // Load the view with the image data
+        $pdf = PDF::loadView('users.agentpdf', compact('base64Image'));
+        
+        // Set paper to A4, portrait orientation
+        $pdf->setPaper('A4', 'portrait');
 
-    // Return the PDF as stream
-    return $pdf->stream();
-}
+        // Return the PDF as stream
+        return $pdf->stream();
+    }
+    //pdf logic end
 
     public function generatePdf()
     {
