@@ -34,12 +34,21 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">
-                            <img src="{{ asset('assets/menu.png') }}" alt="Icon" width="16" height="16">
+                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
                              Profile
                         </a>
-                        <a class="dropdown-item" href="#">Dashboard</a>
-                        <a class="dropdown-item" href="#">Application Forms</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                            Dashboard
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                            Application Forms
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                            Logout
+                        </a>
                     </div>
                 </li>
             </ul>
