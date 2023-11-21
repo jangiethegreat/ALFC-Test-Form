@@ -28,7 +28,7 @@
       height: 575px;
       flex-shrink: 0;
       border-radius: 30px;
-      background: #CC2E2E;
+      background: #FAFAFA;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -49,7 +49,7 @@
 
 
     .agent-text {
-      color: #FFF;
+      color: #CC2E2E;
       text-align: center;
       font-family: Montserrat;
       font-size: 42px;
@@ -76,7 +76,7 @@
       flex-shrink: 0;
       margin-bottom: 40px;
       border-radius: 30px;
-      background: url({{ asset('assets/card2.png') }}) center / contain no-repeat;
+      background: url({{ asset('assets/providers.png') }})  50% / cover no-repeat;
     }
     .affiliates-image {
         margin-top:-90px;
@@ -84,7 +84,7 @@
       height: 100%;
       flex-shrink: 0;
       border-radius: 30px;
-      background: url({{ asset('assets/card3.png') }})  50% / cover no-repeat;
+      background: url({{ asset('assets/clients.png') }})  50% / cover no-repeat;
     }
     @media screen and (max-width: 736px) {
         .column-container {
@@ -111,15 +111,7 @@
         transform: scale(1.00); /* Increase the scale value for a larger growth */
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
     }
-    .dealer-image {
-        margin-top:-53px;
-      width: 100%;
-      height: 100%;
-      flex-shrink: 0;
-      margin-bottom: 40px;
-      border-radius: 80px;
-      background: url({{ asset('assets/card2.png') }}) center / covers no-repeat;
-    }
+    
         
     }
 </style>
