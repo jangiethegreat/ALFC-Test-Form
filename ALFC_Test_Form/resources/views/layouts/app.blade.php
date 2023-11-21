@@ -22,9 +22,22 @@
                 <!-- Show dropdown items on smaller screens -->
                 
                     <div class="dropdown-menu d-block d-lg-none">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                             Profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav dashboard.png') }}" alt="Icon" >
+                            Dashboard
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav application.png') }}" alt="Icon" >
+                            Application Forms
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="{{ asset('assets/nav logout.png') }}" alt="Icon" >
+                            Logout
+                        </a>
                     </div>
 
                 <!-- Show image and dropdown toggle on larger screens -->
@@ -38,15 +51,15 @@
                              Profile
                         </a>
                         <a class="dropdown-item" href="#">
-                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                            <img src="{{ asset('assets/nav dashboard.png') }}" alt="Icon" >
                             Dashboard
                         </a>
                         <a class="dropdown-item" href="#">
-                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                            <img src="{{ asset('assets/nav application.png') }}" alt="Icon" >
                             Application Forms
                         </a>
                         <a class="dropdown-item" href="#">
-                            <img src="{{ asset('assets/nav profile.png') }}" alt="Icon" >
+                            <img src="{{ asset('assets/nav logout.png') }}" alt="Icon" >
                             Logout
                         </a>
                     </div>
