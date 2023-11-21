@@ -41,9 +41,9 @@ class UserController extends Controller
         return $pdf->stream();
     }
 
-    public function homePage()
+    public function marketingArm()
     {
-        return view('users.homepage');
+        return view('users.marketingArm');
     }
     public function landingPage()
     {
