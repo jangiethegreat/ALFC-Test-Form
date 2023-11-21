@@ -134,7 +134,7 @@
     </div>
 
     <div class="card">
-    <div class="agent-text">Insurance Provider</div>
+    <div class="agent-text">PROVIDERS</div>
         <div class="dealer-image"></div>
         
     </div>
