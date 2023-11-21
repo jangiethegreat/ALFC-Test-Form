@@ -140,7 +140,7 @@
     </div>
 
     <div class="card">
-        <div class="agent-text">Client/ Assured Name</div>
+        <div class="agent-text">CLIENTS</div>
         <div class="affiliates-image"></div>
     </div>
 </div>
