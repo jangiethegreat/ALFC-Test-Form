@@ -28,7 +28,7 @@
       height: 575px;
       flex-shrink: 0;
       border-radius: 30px;
-      background: #FAFAFA;
+      background: #CC2E2E;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -49,7 +49,7 @@
 
 
     .agent-text {
-      color: #CC2E2E;
+      color: #FFF;
       text-align: center;
       font-family: Montserrat;
       font-size: 42px;
@@ -60,17 +60,29 @@
       height: 49px;
       margin-top: 41px; /* Adjust this value as needed */
     }
-
+    .providers-text {
+      color: #FFF;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 100%;
+      height: 49px;
+      margin-top: 15px;
+    }
     .agent-image {
-      margin-top: 20px;
-      width: 223px;
-      height: 463px;
+      margin-top: -90px;
+      width: 100%;
+      height: 100%;
       flex-shrink: 0;
-      background: url({{ asset('assets/card1.png') }}) center / cover no-repeat;
+      border-radius: 30px;
+      background: url({{ asset('assets/marketing-arms.png') }}) 50% / cover no-repeat;
     }
 
     .providers-image {
-        margin-top:-90px;
+        margin-top:-62px;
       width: 100%;
       height: 100%;
       flex-shrink: 0;
@@ -126,7 +138,7 @@
     </div>
 
     <div class="card">
-    <div class="agent-text">PROVIDERS</div>
+    <div class="providers-text"  >INSURANCE PROVIDERS</div>
         <div class="providers-image"></div>
         
     </div>
