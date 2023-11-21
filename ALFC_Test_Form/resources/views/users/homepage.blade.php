@@ -69,7 +69,7 @@
       background: url({{ asset('assets/card1.png') }}) center / cover no-repeat;
     }
 
-    .dealer-image {
+    .providers-image {
         margin-top:-90px;
       width: 100%;
       height: 100%;
@@ -78,7 +78,7 @@
       border-radius: 30px;
       background: url({{ asset('assets/providers.png') }})  50% / cover no-repeat;
     }
-    .affiliates-image {
+    .client-image {
         margin-top:-90px;
       width: 100%;
       height: 100%;
@@ -120,20 +120,20 @@
 <div class="column-container">
 <div class="card-container">
     <div class="card">
-    <div class="agent-text">Marketing Arms</div>
+    <div class="agent-text" style="font-size:35px">MARKETING ARMS</div>
         <div class="agent-image"></div>
         
     </div>
 
     <div class="card">
     <div class="agent-text">PROVIDERS</div>
-        <div class="dealer-image"></div>
+        <div class="providers-image"></div>
         
     </div>
 
     <div class="card">
         <div class="agent-text">CLIENTS</div>
-        <div class="affiliates-image"></div>
+        <div class="client-image"></div>
     </div>
 </div>
 </div>
