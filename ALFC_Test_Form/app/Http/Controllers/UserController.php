@@ -45,6 +45,10 @@ class UserController extends Controller
     {
         return view('users.marketingArm');
     }
+    public function homepage()
+    {
+        return view('users.homepage');
+    }
     public function landingPage()
     {
         return view('users.landingPage');

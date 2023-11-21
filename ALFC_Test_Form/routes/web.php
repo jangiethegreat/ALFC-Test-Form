@@ -24,8 +24,8 @@ Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/landing', [UserController::class, 'landingPage'])->name('users.landingPage');
 Route::get('/login', [UserController::class, 'login'])->name('users.login');
 Route::get('/register', [UserController::class, 'register'])->name('users.register');
-Route::get('/homepage', [UserController::class, 'marketingArm'])->name('users.marketingArm');
-Route::get('/marketing-arm', [UserController::class, 'homepage'])->name('users.homepage');
+Route::get('/marketing-arm', [UserController::class, 'marketingArm'])->name('users.marketingArm');
+Route::get('/homepage', [UserController::class, 'homepage'])->name('users.homepage');
 
 //PDF For AgentForm
 Route::get('/generate-pdf', [UserController::class, 'generatePdf'])->name('generate-pdf');
