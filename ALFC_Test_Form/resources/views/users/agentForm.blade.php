@@ -442,69 +442,70 @@
         </div>      
     </div>
 </div>
+
+
     <script>
-      function checkFileForValidID() {
-        const fileInputForValidID = document.getElementById('fileInputForValidID');
-        const validIDCheckBox = document.getElementById('validIDCheckBox');
+        function checkFileForValidID() {
+            const fileInputForValidID = document.getElementById('fileInputForValidID');
+            const validIDCheckBox = document.getElementById('validIDCheckBox');
 
-        if (fileInputForValidID.files && fileInputForValidID.files.length > 0) {
-            validIDCheckBox.disabled = false;
-            validIDCheckBox.checked = true;
-        } else {
-            validIDCheckBox.disabled = true;
-            validIDCheckBox.checked = false;
+            if (fileInputForValidID.files && fileInputForValidID.files.length > 0) {
+                validIDCheckBox.disabled = false;
+                validIDCheckBox.checked = true;
+            } else {
+                validIDCheckBox.disabled = true;
+                validIDCheckBox.checked = false;
+            }
         }
-    }
 
-    function checkBankFile() {
-        const bankFileInput = document.getElementById('bankFileInput');
-        const bankProofCheckBox = document.getElementById('bankProofCheckBox');
+        function checkBankFile() {
+            const bankFileInput = document.getElementById('bankFileInput');
+            const bankProofCheckBox = document.getElementById('bankProofCheckBox');
 
-        if (bankFileInput.files && bankFileInput.files.length > 0) {
-            bankProofCheckBox.disabled = false;
-            bankProofCheckBox.checked = true;
-        } else {
-            bankProofCheckBox.disabled = true;
-            bankProofCheckBox.checked = false;
+            if (bankFileInput.files && bankFileInput.files.length > 0) {
+                bankProofCheckBox.disabled = false;
+                bankProofCheckBox.checked = true;
+            } else {
+                bankProofCheckBox.disabled = true;
+                bankProofCheckBox.checked = false;
+            }
         }
-    }
-    function checkPicFile() {
-    const picFileInput = document.getElementById('picFileInput');
-        const picCheckBox = document.getElementById('picCheckBox');
+        function checkPicFile() {
+        const picFileInput = document.getElementById('picFileInput');
+            const picCheckBox = document.getElementById('picCheckBox');
 
-        if (picFileInput.value) {
-            picCheckBox.disabled = false;
-            picCheckBox.checked = true;
-        } else {
-            picCheckBox.disabled = true;
-            picCheckBox.checked = false;
+            if (picFileInput.value) {
+                picCheckBox.disabled = false;
+                picCheckBox.checked = true;
+            } else {
+                picCheckBox.disabled = true;
+                picCheckBox.checked = false;
+            }
         }
-    }
-    function checkCommissionFile() {
-        const commissionFileInput = document.getElementById('commissionFileInput');
-        const commissionCheckBox = document.getElementById('commissionCheckBox');
+        function checkCommissionFile() {
+            const commissionFileInput = document.getElementById('commissionFileInput');
+            const commissionCheckBox = document.getElementById('commissionCheckBox');
 
-        if (commissionFileInput.files.length > 0) {
-            commissionCheckBox.disabled = false;
-            commissionCheckBox.checked = true;
-        } else {
-            commissionCheckBox.disabled = true;
-            commissionCheckBox.checked = false;
+            if (commissionFileInput.files.length > 0) {
+                commissionCheckBox.disabled = false;
+                commissionCheckBox.checked = true;
+            } else {
+                commissionCheckBox.disabled = true;
+                commissionCheckBox.checked = false;
+            }
         }
-    }
 
-    function checkSignedMOAFile() {
-        const fileInputMOA = document.getElementById('fileInputMOA');
-        const signedMOACheckBox = document.getElementById('signedMOACheckBox');
+        function checkSignedMOAFile() {
+            const fileInputMOA = document.getElementById('fileInputMOA');
+            const signedMOACheckBox = document.getElementById('signedMOACheckBox');
 
-        if (fileInputMOA.files.length > 0) {
-            signedMOACheckBox.disabled = false;
-            signedMOACheckBox.checked = true;
-        } else {
-            signedMOACheckBox.disabled = true;
-            signedMOACheckBox.checked = false;
+            if (fileInputMOA.files.length > 0) {
+                signedMOACheckBox.disabled = false;
+                signedMOACheckBox.checked = true;
+            } else {
+                signedMOACheckBox.disabled = true;
+                signedMOACheckBox.checked = false;
+            }
         }
-    }
-
     </script>
 @endsection
