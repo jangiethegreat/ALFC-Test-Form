@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CoverageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,7 @@ Route::get('/agent-pdf', [UserController::class, 'agentPdf'])->name('users.agent
 
 //form for Agent 
 Route::get('/agent-form', [UserController::class, 'agentForm'])->name('users.agentForm');
+Route::get('/coverages/create', [CoverageController::class, 'create'])->name('coverages.create');
+Route::post('/coverages', [CoverageController::class, 'store'])->name('coverages.store');
+// web.php
+Route::get('/sales-computation', [CoverageController::class, 'salesComputation'])->name('coverages.salescomputation');

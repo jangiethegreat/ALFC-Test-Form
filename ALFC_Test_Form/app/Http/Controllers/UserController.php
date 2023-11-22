@@ -11,6 +11,8 @@ use App\Http\Controllers\File;
 class UserController extends Controller
 
 {
+
+    
     public function agentForm()
     {
         return view("users.agentForm");
