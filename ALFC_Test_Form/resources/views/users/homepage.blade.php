@@ -143,11 +143,11 @@
           <div class="agent-image"></div>
       </div>
   </a>
-
+  <a href="{{ route('users.insuranceprovider') }}" style="text-decoration: none;">
     <div class="card">
     <div class="providers-text"  >INSURANCE PROVIDERS</div>
         <div class="providers-image"></div>
-        
+  </a>     
     </div>
 
     <div class="card">
