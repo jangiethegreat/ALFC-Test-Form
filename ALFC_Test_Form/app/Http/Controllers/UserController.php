@@ -12,6 +12,16 @@ use DataTables;
 class UserController extends Controller
 
 { 
+    public function insuranceProviders()
+    {
+        
+    
+        return view("users.inusranceprovider");
+    }
+
+
+
+
     public function dataTableDesign()
     {
         
