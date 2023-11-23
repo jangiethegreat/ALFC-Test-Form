@@ -123,7 +123,13 @@
         transform: scale(1.00); /* Increase the scale value for a larger growth */
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
     }
-    
+    a {
+        text-decoration: none;
+        color: inherit; /* Use the default text color */
+    }
+    a:hover {
+        cursor: pointer;
+    }
         
     }
 </style>
@@ -131,11 +137,12 @@
 <div class="desc-text">Insurance Agency Corporation</div>
 <div class="column-container">
 <div class="card-container">
-    <div class="card">
-    <div class="agent-text" style="font-size:35px">MARKETING ARMS</div>
-        <div class="agent-image"></div>
-        
-    </div>
+<a href="{{ route('users.marketingArm') }}" style="text-decoration: none;">
+      <div class="card">
+          <div class="agent-text" style="font-size:35px">MARKETING ARMS</div>
+          <div class="agent-image"></div>
+      </div>
+  </a>
 
     <div class="card">
     <div class="providers-text"  >INSURANCE PROVIDERS</div>
