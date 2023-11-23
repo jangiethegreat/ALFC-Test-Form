@@ -4,13 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\DummyData;
 use Illuminate\Support\Facades\App;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Http\Controllers\File;
-
+use DataTables;
 class UserController extends Controller
 
+{ 
+    public function dataTableDesign()
+    {
+        
+    
+        return view("users.datatabledesign");
+    }
+
+    public function fetchData()
 {
+    $data = DummyData::all();
+    return datatables()->of($data)->toJson();
+
+}
+
 
     
     public function agentForm()

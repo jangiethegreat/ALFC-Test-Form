@@ -31,6 +31,8 @@ Route::get('/homepage', [UserController::class, 'homepage'])->name('users.homepa
 //PDF For AgentForm
 Route::get('/generate-pdf', [UserController::class, 'generatePdf'])->name('generate-pdf');
 Route::get('/agent-pdf', [UserController::class, 'agentPdf'])->name('users.agentpdf');
+Route::get('/datatable-design', [UserController::class, 'dataTableDesign'])->name('users.datatabledesign');
+Route::get('/fetchData', [UserController::class, 'fetchData'])->name('fetch.data');
 
 //form for Agent 
 Route::get('/agent-form', [UserController::class, 'agentForm'])->name('users.agentForm');
