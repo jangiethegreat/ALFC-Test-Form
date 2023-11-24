@@ -82,7 +82,7 @@
     }
 
     .providers-image {
-      margin-top:-62px;
+      margin-top:-63px;
       width: 100%;
       height: 100%;
       flex-shrink: 0;
@@ -143,7 +143,7 @@
         margin:20px;
     }
     .card:hover {
-        transform: scale(1.00); /* Increase the scale value for a larger growth */
+        transform: scale(1.1); /* Increase the scale value for a larger growth */
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
     }
     a {
