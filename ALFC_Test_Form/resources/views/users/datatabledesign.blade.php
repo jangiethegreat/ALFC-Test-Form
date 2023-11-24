@@ -31,8 +31,8 @@
 }
 .adjustable-address {
     display: inline-block;
-    width: 250px;
-
+    width: auto;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -77,7 +77,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th class="adjustable-address">Address</th>
+                    <th >Address</th>
                     <th>Birthdate</th>
                     <th>Contact No.</th>
                     <th>Company</th>
