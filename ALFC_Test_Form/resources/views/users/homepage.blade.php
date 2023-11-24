@@ -137,7 +137,7 @@
 <div class="desc-text">Insurance Agency Corporation</div>
 <div class="column-container">
 <div class="card-container">
-<a href="{{ route('users.marketingArm') }}" style="text-decoration: none;">
+ <a href="{{ route('users.marketingArm') }}" style="text-decoration: none;">
       <div class="card">
           <div class="agent-text" style="font-size:35px">MARKETING ARMS</div>
           <div class="agent-image"></div>
@@ -147,9 +147,9 @@
     <div class="card">
     <div class="providers-text"  >INSURANCE PROVIDERS</div>
         <div class="providers-image"></div>
-  </a>     
+        
     </div>
-
+    </a>
     <div class="card">
         <div class="agent-text">CLIENTS</div>
         <div class="client-image"></div>

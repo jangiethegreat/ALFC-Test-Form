@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         
     
-        return view("users.inusranceprovider");
+        return view("users.insuranceprovider");
     }
 
 
