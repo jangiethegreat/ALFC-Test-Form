@@ -143,8 +143,8 @@
         margin:20px;
     }
     .card:hover {
-        transform: scale(1.1); /* Increase the scale value for a larger growth */
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
+        transform: scale(0.9); /* Increases the size of the card on hover */
+        transition: transform 0.3s ease; /* Adds a smooth transition effect */
     }
     a {
         text-decoration: none;
