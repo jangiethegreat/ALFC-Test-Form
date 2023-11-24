@@ -12,6 +12,13 @@ use DataTables;
 class UserController extends Controller
 
 { 
+    public function fgenCategory()
+    {
+        
+    
+        return view("users.fgencategory");
+    }
+
     public function insuranceProviders()
     {
         
