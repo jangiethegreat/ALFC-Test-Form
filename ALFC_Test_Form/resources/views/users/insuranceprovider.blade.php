@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    .card {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+</style>
 
 <h2 style="text-align: center; color: #332727; font-family: Montserrat; font-size: 40px; font-weight: 700; margin-top: 45px; margin-bottom: 50px;">
     PARTNERED INSURANCE COMPANIES
