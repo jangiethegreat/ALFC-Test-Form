@@ -16,7 +16,7 @@
     word-wrap: break-word;
     text-align: center; /* Add this line if you want to center the text */
 }
-.column-container {
+  .column-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -82,7 +82,7 @@
     }
 
     .providers-image {
-        margin-top:-62px;
+      margin-top:-62px;
       width: 100%;
       height: 100%;
       flex-shrink: 0;
@@ -99,6 +99,29 @@
       background: url({{ asset('assets/clients.png') }})  50% / cover no-repeat;
     }
     @media screen and (max-width: 736px) {
+      .card-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px; /* Adjust margin between cards */
+    }
+
+      .alfc-text {
+        color: #2C2C2C;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        word-wrap: break-word;
+        text-align: center; /* Add this line to center the text */
+    }
+
+      .desc-text {
+        color: #B80000;
+        font-size:20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        word-wrap: break-word;
+        text-align: center; /* Add this line if you want to center the text */
+    }
         .column-container {
         display: flex;
         flex-direction: column;
@@ -116,8 +139,8 @@
 
     .card {
         border-radius: 30px; /* Add or adjust the border-radius as needed */
-        margin: 50px; /* Add margin between cards */
         width: 350px;
+        margin:20px;
     }
     .card:hover {
         transform: scale(1.00); /* Increase the scale value for a larger growth */
