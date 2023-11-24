@@ -39,13 +39,13 @@
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
     }
     .alfc-text {
-    color: #2C2C2C;
-    font-size: 100px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-    word-wrap: break-word;
-    text-align: center; /* Add this line to center the text */
-}
+      color: #2C2C2C;
+      font-size: 100px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 700;
+      word-wrap: break-word;
+      text-align: center; /* Add this line to center the text */
+    }
 
 
     .agent-text {
@@ -87,6 +87,28 @@
       background: url({{ asset('assets/card3.png') }})  50% / cover no-repeat;
     }
     @media screen and (max-width: 736px) {
+      .card-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px; /* Adjust margin between cards */
+    }
+      .alfc-text {
+        color: #2C2C2C;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        word-wrap: break-word;
+        text-align: center; /* Add this line to center the text */
+    }
+
+      .desc-text {
+        color: #B80000;
+        font-size: 20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        word-wrap: break-word;
+        text-align: center; /* Add this line if you want to center the text */
+    }
         .column-container {
         display: flex;
         flex-direction: column;
@@ -108,8 +130,8 @@
         width: 350px;
     }
     .card:hover {
-        transform: scale(1.00); /* Increase the scale value for a larger growth */
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Adjust the shadow color and size as needed */
+        transform: scale(0.9); /* Increases the size of the card on hover */
+        transition: transform 0.3s ease; /* Adds a smooth transition effect */
     }
     .dealer-image {
         margin-top:-53px;
