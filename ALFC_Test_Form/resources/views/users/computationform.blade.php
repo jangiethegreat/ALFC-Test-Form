@@ -309,11 +309,11 @@
                                 <div class="card border-0">
                                     <div class="card-body" id="dynamicFieldsContainer">
                                         <div class="row row-space" id="initialInputs">
-                                            <div class=" col-6 col-sm-3 col-md-6  d-flex flex-column align-items-center ">
+                                            <div class="col-6 col-sm-3 col-md-6 d-flex flex-column align-items-center">
                                                 <label class="input-label label">Deductions</label>
                                                 <input type="text" class="form-control" style="height: 38px; background: #F4F4F4;">
                                             </div>
-                                            <div class=" col-6 col-sm-3 col-md-6 d-flex flex-column align-items-center">
+                                            <div class="col-6 col-sm-3 col-md-6 d-flex flex-column align-items-center">
                                                 <label class="input-label label">Amount</label>
                                                 <input type="text" class="form-control" style="height: 38px; background: #F4F4F4;">
                                             </div>
@@ -321,12 +321,16 @@
                                         <div class="row mt-3">
                                             <div class="col-md-12 text-right">
                                                 <button class="btn btn-danger" id="addFieldBtn">Add</button>
+                                                <button class="btn btn-secondary ml-2" id="deleteFieldBtn" style="background-color: transparent; border: none; color: red;" onclick="this.blur()" disabled>
+                                                    Delete
+                                                </button>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                        
+                                                                                    
                             <!-- Second card container for label and form -->
                             <div class="col-md-6">
                                 <div class="card border-0">
@@ -387,27 +391,51 @@
     </div>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById('addFieldBtn').addEventListener('click', function () {
-            var newFieldsContainer = document.createElement('div');
-            newFieldsContainer.className = 'row row-space';
-            
-            var newField1 = document.createElement('div');
-            newField1.className = 'col-6 col-sm-4 col-md-6 mb-3 d-flex align-items-center justify-content-center';
-            newField1.innerHTML = '<input type="text" class="form-control" style="height: 38px; background: #F4F4F4;">';
+        document.addEventListener('DOMContentLoaded', function () {
+            var originalInputs = document.getElementById('initialInputs').cloneNode(true);
+            var addedFieldContainers = [];
 
-            var newField2 = document.createElement('div');
-            newField2.className = 'col-6 col-sm-4 col-md-6 mb-3 d-flex align-items-center justify-content-center';
-            newField2.innerHTML = '<input type="text" class="form-control" style="height: 38px; background: #F4F4F4;">';
+            document.getElementById('addFieldBtn').addEventListener('click', function () {
+                var newFieldsContainer = document.createElement('div');
+                newFieldsContainer.className = 'row row-space';
 
-            newFieldsContainer.appendChild(newField1);
-            newFieldsContainer.appendChild(newField2);
+                var newField1 = document.createElement('div');
+                newField1.className = 'col-6 col-sm-3 col-md-6 mb-3 d-flex align-items-center justify-content-center';
+                newField1.innerHTML = '<input type="text" class="form-control" style="height: 38px; background: #F4F4F4;">';
 
-            var addButton = document.getElementById('addFieldBtn');
-            addButton.parentNode.insertBefore(newFieldsContainer, addButton.parentNode.firstChild);
+                var newField2 = document.createElement('div');
+                newField2.className = 'col-6 col-sm-3 col-md-6 mb-3 d-flex align-items-center justify-content-center';
+                newField2.innerHTML = '<input type="text" class="form-control" style="height: 38px; background: #F4F4F4;">';
+
+                newFieldsContainer.appendChild(newField1);
+                newFieldsContainer.appendChild(newField2);
+
+                var addButton = document.getElementById('addFieldBtn');
+                addButton.parentNode.insertBefore(newFieldsContainer, addButton.parentNode.firstChild);
+
+                addedFieldContainers.push(newFieldsContainer);
+                updateDeleteButton();
+            });
+
+            document.getElementById('deleteFieldBtn').addEventListener('click', function () {
+                if (addedFieldContainers.length > 0) {
+                    var lastAddedContainer = addedFieldContainers.pop();
+                    lastAddedContainer.remove();
+                    updateDeleteButton();
+                } else {
+                    // When all added fields are deleted, restore the original inputs
+                    var dynamicFieldsContainer = document.getElementById('dynamicFieldsContainer');
+                    dynamicFieldsContainer.innerHTML = '';
+                    dynamicFieldsContainer.appendChild(originalInputs.cloneNode(true));
+                }
+            });
+
+            function updateDeleteButton() {
+                var deleteButton = document.getElementById('deleteFieldBtn');
+                deleteButton.disabled = addedFieldContainers.length === 0;
+            }
         });
-    });
-</script>
+    </script>
 
 
 @endsection
