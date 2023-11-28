@@ -11,7 +11,14 @@ use App\Http\Controllers\File;
 use DataTables;
 class UserController extends Controller
 
-{ 
+
+{ public function computationForm()
+    {
+        
+    
+        return view("users.computationForm");
+    }
+    
     public function fgenCategory()
     {
         

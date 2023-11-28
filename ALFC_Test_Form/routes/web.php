@@ -29,6 +29,7 @@ Route::get('/marketing-arm', [UserController::class, 'marketingArm'])->name('use
 Route::get('/homepage', [UserController::class, 'homepage'])->name('users.homepage');
 Route::get('/insurance-provider', [UserController::class, 'insuranceProviders'])->name('users.insuranceprovider');
 Route::get('/fgen-category', [UserController::class, 'fgenCategory'])->name('users.fgencategory');
+Route::get('/computation-form', [UserController::class, 'computationForm'])->name('users.computationForm');
 //PDF For AgentForm
 Route::get('/generate-pdf', [UserController::class, 'generatePdf'])->name('generate-pdf');
 Route::get('/agent-pdf', [UserController::class, 'agentPdf'])->name('users.agentpdf');
