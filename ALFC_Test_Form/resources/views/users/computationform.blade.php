@@ -15,6 +15,13 @@
 .botborder{
     border-bottom: 1px solid #E2E2E2; 
 }
+
+.invalid-inputs {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
 @media screen and (max-width: 767px) {
     .text-small{
     font-size:13px;
@@ -28,7 +35,12 @@
     color:red;
    
     }
+    .hidden-mobile {
+            visibility: visible !important; /* Adding !important to ensure higher specificity */
+        }
 }
+
+
     
     
 
@@ -102,20 +114,22 @@
                                 <label class="text-smaller input-label label">OWN DAMAGE/THEFT</label>
                             </div>
 
-                            <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
+                            <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center form-floating">
                                 <label class="text-card input-label label">LIMIT</label>
-                                <input type="text" id="odt_limit" name="odt_limit" class="form-control" style="height: 38px; background: #F4F4F4;">
+                                <input type="text" id="odt_limit" name="odt_limit" class="form-control" style="height: 38px; background: #F4F4F4;" oninput="validateAndFormat(this)">
+                                <div class="invalid-inputs odt-invalid-inputs">
+
+                                </div>
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label">RATE</label>
                                 <input type="text" id="odt_rate" name="odt_rate" class="form-control" style="height: 38px; background: #F4F4F4;">
-
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label">PREMIUM DUE</label>
-                                <input type="text" id="odt_premium_due" name="odt_premium_due" class="form-control" style="height: 38px; background: #F4F4F4;">
+                                <input type="text" id="odt_premium_due" name="odt_premium_due" class="form-control" style="height: 38px; background: #F4F4F4;" readonly>
 
                             </div>
                         </div>
@@ -130,7 +144,7 @@
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label ">LIMIT</label>
                                 <input type="text" id="bi_limit" name="last_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
-
+ 
                             </div>
 
 
@@ -154,7 +168,9 @@
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label ">LIMIT</label>
                                 <input type="text" id="last_name" name="last_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
-
+                                <div class="invalid-feedback">
+                                    
+                                </div>
                             </div>
 
 
@@ -200,21 +216,21 @@
                                 <label class="text-smaller text-card input-label label">AOG</label>
                             </div>
 
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
-                                <label class="text-card input-label label ">LIMIT</label>
-                                <input type="text" id="last_name" name="last_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
-
+                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center form-floating">
+                                <label class="text-card input-label label">LIMIT</label>
+                                <input type="text" id="aog_limit" name="aog_limit" class="form-control" style="height: 38px; background: #F4F4F4;" oninput="validateAogLimit(this)">
+                                <div class="invalid-inputs aog-invalid-inputs"></div>
                             </div>
 
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label">RATE</label>
-                                <input type="text" id="middle_name" name="middle_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
+                                <input type="text" id="aog_rate" name="aog_rate" class="form-control" style=" height: 38px; background: #F4F4F4;">
         
                             </div>
                             <div class="col-6 col-sm-3 col-md-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label">PREMIUM DUE</label>
-                                <input type="text" id="middle_name" name="middle_name" class="form-control" style=" height: 38px; background: #F4F4F4;">
+                                <input type="text" id="aog_premium_due" name="aog_premium_due" class="form-control" style=" height: 38px; background: #F4F4F4;">
 
                             </div>
                         </div>
@@ -436,6 +452,108 @@
             }
         });
     </script>
+    <script>
+
+        let ownDamageSetLimit = 450000.000000000;
+
+        function validateAndFormat(input) {
+            var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+            var formattedValue = Number(value).toLocaleString('en-US'); // Format to have commas
+
+            if (value > ownDamageSetLimit) {
+                input.classList.add('is-invalid');
+                document.querySelector('.odt-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + ownDamageSetLimit.toLocaleString('en-US');
+            } else {
+                input.classList.remove('is-invalid');
+                document.querySelector('.odt-invalid-inputs').innerText = '';
+            }
+
+            input.value = formattedValue;
+        }
+
+        document.getElementById('odt_rate').addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                convertToDecimalPercentageODT();
+            }
+        });
+
+        function convertToDecimalPercentageODT() {
+            var input = document.getElementById('odt_rate');
+            var value = input.value.trim(); // Remove leading/trailing spaces
+            var parsedValue = parseFloat(value);
+
+            if (!isNaN(parsedValue)) {
+                var decimalValue = parsedValue / 100;
+                input.value = parsedValue + '%';
+                decimalValue.toFixed(4); 
+                calculatePremiumDueODT(decimalValue);
+            }
+        }
+
+
+        function calculatePremiumDueODT(decimalValue) {
+            var limit = parseFloat(document.getElementById('odt_limit').value.replace(/\D/g, ''));
+
+            if (!isNaN(limit) && !isNaN(decimalValue)) {
+                var premiumDue = (limit * decimalValue).toFixed(4);
+                document.getElementById('odt_premium_due').value = premiumDue;
+            }
+        }
+    </script>
+
+    <script>
+
+        let aogSetLimit = 300000.000000000;
+
+        function validateAogLimit(input) {
+            var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+            var formattedValue = Number(value).toLocaleString('en-US'); // Format to have commas
+
+
+                if (value > aogSetLimit) {
+                    input.classList.add('is-invalid');
+                    document.querySelector('.aog-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + aogSetLimit.toLocaleString('en-US');
+                } else {
+                    input.classList.remove('is-invalid');
+                document.querySelector('.aog-invalid-inputs').innerText = '';                }
+
+                input.value = formattedValue; 
+            }
+
+            document.getElementById('aog_rate').addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                convertToDecimalPercentage();
+            }
+            });
+
+            function convertToDecimalPercentage() {
+                var input = document.getElementById('aog_rate');
+                var value = input.value.trim(); // Remove leading/trailing spaces
+                var parsedValue = parseFloat(value);
+
+                if (!isNaN(parsedValue)) {
+                    var decimalValue = parsedValue / 100;
+                    input.value = parsedValue + '%';
+                    decimalValue.toFixed(4); 
+                    calculatePremiumDue(decimalValue);
+                }
+            }
+
+            function calculatePremiumDue(decimalValue) {
+            var limit = parseFloat(document.getElementById('aog_limit').value.replace(/\D/g, ''));
+
+            if (!isNaN(limit) && !isNaN(decimalValue)) {
+                var premiumDue = (limit * decimalValue).toFixed(4);
+                document.getElementById('aog_premium_due').value = premiumDue;
+            }
+        }
+
+
+    </script>
+
+
+
+
 
 
 @endsection
