@@ -133,11 +133,15 @@
                                 <div class="invalid-inputs odt-invalid-inputs">
 
                                 </div>
+                                
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label">RATE</label>
-                                <input type="text" id="odt_rate" name="odt_rate" class="form-control custom-input" >
+                                <input type="text" id="odt_rate" name="odt_rate" class="form-control custom-input" oninput="validateRate(this)" >
+                                <div class="invalid-inputs odtrate-invalid-inputs">
+
+                                </div>
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
@@ -488,9 +492,38 @@
             input.value = formattedValue;
         }
 
+        
+        let odtRateLimit = 3.5;
+        function validateRate(input) {
+            var value = input.value.trim(); // Remove leading/trailing spaces
+            var parsedValue = parseFloat(value);
+
+            if (!isNaN(parsedValue)) {
+                if (parsedValue > odtRateLimit) {
+                    input.classList.add('is-invalid');
+                    // Show an error message for rate exceeding 100
+                    document.querySelector('.odtrate-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + odtRateLimit + '%';
+                } else {
+                    input.classList.remove('is-invalid');
+                    document.querySelector('.odtrate-invalid-inputs').innerText = '';
+                }
+            } else {
+                input.classList.remove('is-invalid');
+                // Show an error message for invalid input
+                document.querySelector('.odtrate-invalid-inputs').innerText = '';
+            }
+        }
+
         document.getElementById('odt_rate').addEventListener('keyup', function (event) {
             if (event.key === 'Enter') {
-                convertToDecimalPercentageODT();
+                validateRate(this); // Check the rate validity
+                var value = this.value.trim(); // Remove leading/trailing spaces
+                var parsedValue = parseFloat(value);
+                if (!isNaN(parsedValue) && parsedValue <= odtRateLimit) {
+                    convertToDecimalPercentageODT();
+                }
+            } else {
+                validateRate(this); // Call the rate validation function on each keyup event
             }
         });
 
