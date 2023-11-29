@@ -129,16 +129,16 @@
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center form-floating">
                                 <label class="text-card input-label label">LIMIT</label>
-                                <input type="text" id="odt_limit" name="odt_limit" class="form-control custom-input" style="height: 38px;" oninput="validateAndFormat(this)">
+                                <input type="text" id="odt_limit" name="odt_limit" class="form-control custom-input" style="height: 38px;" oninput="validateOwnDamageLimit(this)">
                                 <div class="invalid-inputs odt-invalid-inputs">
 
                                 </div>
-                                
+
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label">RATE</label>
-                                <input type="text" id="odt_rate" name="odt_rate" class="form-control custom-input" oninput="validateRate(this)" >
+                                <input type="text" id="odt_rate" name="odt_rate" class="form-control custom-input" oninput="validateOwnDamageRate(this)" >
                                 <div class="invalid-inputs odtrate-invalid-inputs">
 
                                 </div>
@@ -190,7 +190,6 @@
 
                                 </div>
                             </div>
-
 
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">RATE</label>
@@ -262,7 +261,7 @@
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                             </div>
                             <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
-                                
+
                             </div>
                             <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label">NET PREMIUM</label>
@@ -426,6 +425,8 @@
         </div>
     </div>
 
+
+    {{-- Button Addition Function --}}
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var originalInputs = document.getElementById('initialInputs').cloneNode(true);
@@ -473,36 +474,45 @@
         });
     </script>
 
+
+
+    {{--Own Damage Function --}}
+  
+    {{--     let ownDamageSetLimit = @json($ownDamageComputations->pluck('ownDamageSetLimit')->first());
+        let ownDamageSetRate = @json($ownDamageComputations->pluck('ownDamageSetRate')->first());
+        let ownDamageRate = ownDamageSetRate * 100; --}}
     <script>
 
-        let ownDamageSetLimit = 450000.000000000;
+   
+        let ownDamageSetLimit = 500000;
+        let ownDamageRate = 1.75;
+        function validateOwnDamageLimit(input) {
+            const numericValue = Number(input.value.replace(/[^\d.]/g, ''));
+            const formattedValue = numericValue.toLocaleString('en-US');
+            const formattedOwnDamageLimit = parseFloat(ownDamageSetLimit).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
-        function validateAndFormat(input) {
-            var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
-            var formattedValue = Number(value).toLocaleString('en-US'); // Format to have commas
-
-            if (value > ownDamageSetLimit) {
+            if (numericValue > ownDamageSetLimit) {
                 input.classList.add('is-invalid');
-                document.querySelector('.odt-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + ownDamageSetLimit.toLocaleString('en-US');
+                document.querySelector('.odt-invalid-inputs').innerText = `Please enter a value less than or equal to ${formattedOwnDamageLimit}`;
             } else {
                 input.classList.remove('is-invalid');
                 document.querySelector('.odt-invalid-inputs').innerText = '';
             }
 
+            // Update input value with formatted value
             input.value = formattedValue;
         }
 
-        
-        let odtRateLimit = 3.5;
-        function validateRate(input) {
+        function validateOwnDamageRate(input) {
             var value = input.value.trim(); // Remove leading/trailing spaces
             var parsedValue = parseFloat(value);
+            const formattedOwnDamageRate = parseFloat(ownDamageRate).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
             if (!isNaN(parsedValue)) {
-                if (parsedValue > odtRateLimit) {
+                if (parsedValue > formattedOwnDamageRate) {
                     input.classList.add('is-invalid');
                     // Show an error message for rate exceeding 100
-                    document.querySelector('.odtrate-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + odtRateLimit + '%';
+                    document.querySelector('.odtrate-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + formattedOwnDamageRate + '%';
                 } else {
                     input.classList.remove('is-invalid');
                     document.querySelector('.odtrate-invalid-inputs').innerText = '';
@@ -516,14 +526,14 @@
 
         document.getElementById('odt_rate').addEventListener('keyup', function (event) {
             if (event.key === 'Enter') {
-                validateRate(this); // Check the rate validity
+                validateOwnDamageRate(this); // Check the rate validity
                 var value = this.value.trim(); // Remove leading/trailing spaces
                 var parsedValue = parseFloat(value);
-                if (!isNaN(parsedValue) && parsedValue <= odtRateLimit) {
+                if (!isNaN(parsedValue) && parsedValue <= ownDamageRate) {
                     convertToDecimalPercentageODT();
                 }
             } else {
-                validateRate(this); // Call the rate validation function on each keyup event
+                validateOwnDamageRate(this); // Call the rate validation function on each keyup event
             }
         });
 
@@ -544,14 +554,15 @@
             var limit = parseFloat(document.getElementById('odt_limit').value.replace(/\D/g, ''));
 
             if (!isNaN(limit) && !isNaN(decimalValue)) {
-                var premiumDue = (limit * decimalValue).toFixed(4);
-                document.getElementById('odt_premium_due').value = premiumDue;
+                var premiumDue = (limit * decimalValue).toFixed(2);
+                document.getElementById('odt_premium_due').value = parseFloat(premiumDue).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             }
         }
 
     </script>
 
 
+    {{-- AOG Functions --}}
     <script>
 
         let aogSetLimit = 300000.000000000;
