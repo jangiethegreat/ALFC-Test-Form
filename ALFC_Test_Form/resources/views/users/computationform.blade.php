@@ -26,6 +26,7 @@
     .custom-input{
         height: 38px;
         background: #E4E4E4;
+        text-align: center;
     }
 
     .form-control custom-input{
@@ -144,7 +145,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label">PREMIUM DUE</label>
                                 <input type="text" id="odt_premium_due" name="odt_premium_due" class="form-control custom-input"  readonly>
 
@@ -170,7 +171,7 @@
                                 <input type="text" id="bi_rate" name="middle_name" class="form-control custom-input" >
 
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center" >
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
                                 <input type="text" id="middle_name" name="middle_name" class="form-control custom-input" >
 
@@ -196,7 +197,7 @@
                                 <input type="text" id="middle_name" name="middle_name" class="form-control custom-input" >
 
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center" >
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
                                 <input type="text" id="middle_name" name="middle_name" class="form-control custom-input" >
                             </div>
@@ -220,7 +221,7 @@
 
                             </div>
 
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
                                 <input type="text" id="aps_premium_due" name="aps_premium_due" class="form-control custom-input" >
 
@@ -246,7 +247,7 @@
                                 <input type="text" id="aog_rate" name="aog_rate" class="form-control custom-input" >
 
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 d-flex flex-column align-items-center" >
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
                                 <input type="text" id="aog_premium_due" name="aog_premium_due" class="form-control custom-input" >
 
@@ -566,6 +567,7 @@
     <script>
 
         let aogSetLimit = 300000.000000000;
+        
 
         function validateAogLimit(input) {
             var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
