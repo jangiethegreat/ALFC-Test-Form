@@ -21,7 +21,6 @@
         margin-top: 0.25rem;
         font-size: 80%;
         color: #dc3545;
-        text-align: center;
     }
 
     .custom-input{
@@ -62,16 +61,15 @@
 </style>
 
 
-<div class="container mt-5" >
+<div class="container" >
         <div class="row justify-content-center" >
             <div class="col-md-10">
                 <div class="card" >
                     <div class="card-body">
-                        <h2 class="agent-header"> Sedan Quotation Form</h2>
-
+                        <h2 class="agent-header"> Sedan Quotation Form   </h2>
                         <div>
-                            <p class="agent-profile">Insured Details<br><span class="agent-profile-desc">Please input the information of the insured in the designated fields below.</span></p>
-                            <p class="botborder col-md-12"></p>
+                        <p class="agent-profile">Insured Details<br><span class="agent-profile-desc">Please input the information of the insured in the designated fields below.</span></p>
+                        <p class="botborder col-md-12"></p>
                         </div>
 
                         <div class="row row-space">
@@ -120,8 +118,8 @@
 
 
                         <div>
-                            <p class="agent-profile">Coverage Limits and Rates<br><span class="agent-profile-desc">Please input the limits per coverage and the rate the designated fields below.</span></p>
-                            <p class="botborder col-md-12"></p>
+                        <p class="agent-profile">Coverage Limits and Rates<br><span class="agent-profile-desc">Please input the limits per coverage and the rate the designated fields below.</span></p>
+                        <p class="botborder col-md-12"></p>
                         </div>
 
                         {{-- Own Damage / Theft Row Input Field --}}
@@ -134,7 +132,9 @@
                                 <label class="text-card input-label label">LIMIT</label>
                                 <input type="text" id="odt_limit" name="odt_limit" class="form-control custom-input" style="height: 38px;" oninput="validateOwnDamageLimit(this)">
                                 <div class="invalid-inputs odt-invalid-inputs">
+
                                 </div>
+
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
@@ -145,9 +145,10 @@
                                 </div>
                             </div>
 
-                            <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label">PREMIUM DUE</label>
                                 <input type="text" id="odt_premium_due" name="odt_premium_due" class="form-control custom-input"  readonly>
+
                             </div>
                         </div>
 
@@ -155,21 +156,13 @@
                         {{-- Bodily Injury Input Field --}}
                         <div class ="row row-space">
                             <div class="col-sm-3 col-md-3  mt-3 d-flex align-items-center justify-content-center">
+
                                 <label class="text-smaller input-label label">BODILY INJURY</label>
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">LIMIT</label>
-                                <select id="bi_limit" name="bi_limit" class="form-control custom-input">
-                                    <option disabled="disabled" selected="selected">Select Limit</option>
-                                    @foreach ($bodilyInjuryComputations as $computation)
-                                        <option value="{{ $computation->bodilyInjurySetLimit }}"
-                                            data-rate="{{ $computation->bodilyInjurySetRate }}"
-                                            data-id="{{ $computation->id }}">
-                                        {{ $computation->bodilyInjurySetLimit }}
-                                        </option>
-                                    @endforeach
-                                </select>
+                                <input type="text" id="bi_limit" name="last_name" class="form-control custom-input" >
                             </div>
 
 
@@ -178,10 +171,10 @@
                                 <input type="text" id="bi_rate" name="middle_name" class="form-control custom-input" >
 
                             </div>
-
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
-                                <input type="text" id="bi_premium_due" name="bi_premium_due" class="form-control custom-input">
+                                <input type="text" id="middle_name" name="middle_name" class="form-control custom-input" >
+
                             </div>
                         </div>
 
@@ -193,27 +186,20 @@
 
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">LIMIT</label>
-                                <select id="pd_limit" name="pd_limit" class="form-control custom-input">
-                                    <option disabled="disabled" selected="selected">Select Limit</option>
-                                    @foreach ($propertyDamageComputations as $propertyDamageComputation)
-                                        <option value="{{
-                                            $propertyDamageComputation->propertyDamageSetLimit }}"
-                                            data-rate="{{ $propertyDamageComputation->propertyDamageSetRate }}"
-                                            data-id="{{ $propertyDamageComputation->id }}">
-                                        {{ $propertyDamageComputation->propertyDamageSetLimit }}
-                                        </option>
-                                    @endforeach
-                                </select>
+                                <input type="text" id="last_name" name="last_name" class="form-control custom-input" >
+                                <div class="invalid-feedback">
+
+                                </div>
                             </div>
 
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">RATE</label>
-                                <input type="text" class="form-control custom-input" >
-                            </div>
+                                <input type="text" id="middle_name" name="middle_name" class="form-control custom-input" >
 
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center" >
+                            </div>
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
-                                <input type="text" id="pd_premium_due" name="pd_premium_due" class="form-control custom-input" >
+                                <input type="text" id="middle_name" name="middle_name" class="form-control custom-input" >
                             </div>
                         </div>
 
@@ -225,7 +211,7 @@
 
                             <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">LIMIT</label>
-                                <input type="text" id="aps_limit" name="aps_limit" class="form-control custom-input" value="{{ $autoPaComputations->first()->autoPaSetLimit }}" >
+                                <input type="text" id="aps_limit" name="aps_limit" class="form-control custom-input" >
 
                             </div>
 
@@ -235,7 +221,7 @@
 
                             </div>
 
-                            <div class="col-6 col-sm-3 col-md-3  mb-3 d-flex flex-column align-items-center">
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center">
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
                                 <input type="text" id="aps_premium_due" name="aps_premium_due" class="form-control custom-input" >
 
@@ -258,10 +244,10 @@
 
                             <div class="col-6 col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">RATE</label>
-                                <input type="text" id="aog_rate" name="aog_rate" class="form-control custom-input" oninput="validateAogRate(this)">
-                                <div class="invalid-inputs aograte-invalid-inputs"></div>
+                                <input type="text" id="aog_rate" name="aog_rate" class="form-control custom-input" >
+
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 d-flex flex-column align-items-center" >
+                            <div class="col-sm-3 col-md-3 mb-3 d-flex flex-column align-items-center" >
                                 <label class="text-card input-label label hidden-mobile" style="visibility: hidden;">PREMIUM DUE</label>
                                 <input type="text" id="aog_premium_due" name="aog_premium_due" class="form-control custom-input" >
 
@@ -349,8 +335,8 @@
 
 
                         <div>
-                            <p class="agent-profile">Full Commission/Revenue<br><span class="agent-profile-desc">Please input the necessary details for computation in the designated fields below.</span></p>
-                            <p class="botborder col-md-12"></p>
+                        <p class="agent-profile">Full Commission/Revenue<br><span class="agent-profile-desc">Please input the necessary details for computation in the designated fields below.</span></p>
+                        <p class="botborder col-md-12"></p>
                         </div>
 
                         <div class="row">
@@ -370,12 +356,11 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-md-12 text-right">
-                                                <button class="btn btn-danger" id="addFieldBtn">Add</button>
+                                                
                                                 <button class="btn btn-secondary ml-2" id="deleteFieldBtn" style="background-color: transparent; border: none; color: red;" onclick="this.blur()" disabled>
                                                     Delete
                                                 </button>
                                                 <button class="btn  btn-danger " style="border-radius:20px;"id="addFieldBtn">Add</button>
-
                                             </div>
                                         </div>
                                     </div>
@@ -428,38 +413,40 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                            <!-- button trigger for modal -->
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-danger mt-3" style="border-radius:20px;" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                            </div>
 
-                                    <div class="d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-danger mt-3" style="border-radius:20px;" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                            <!-- Modal for Confirmation -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Proceed with Quotation Submission</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Proceed with Quotation Submission</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body ">
-                                            Please note that all entered information will be subjected to a thorough validation process before final approval is granted. Once you submit the details, they will be forwarded for review and subsequent approval. Kindly ensure the accuracy and completeness of the information provided, as once the submission is confirmed, no further modifications or edits can be made
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-secondary ml-2" data-dismiss="modal"  style="background-color: transparent; border: none; color: red;" >
-                                                    Cancel
-                                                </button>
-                                                <button type="button" class="btn btn-danger" style="border-radius: 20px;" >Proceed</button>
-                                                <!-- Add another button here if needed -->
-                                            </div>
-                                            </div>
-                                        </div>
+                                    <div class="modal-body ">
+                                    Please note that all entered information will be subjected to a thorough validation process before final approval is granted. Once you submit the details, they will be forwarded for review and subsequent approval. Kindly ensure the accuracy and completeness of the information provided, as once the submission is confirmed, no further modifications or edits can be made
                                     </div>
-
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary ml-2" data-dismiss="modal"  style="background-color: transparent; border: none; color: red;" >
+                                            Cancel
+                                        </button>
+                                        <button type="button" class="btn btn-danger" style="border-radius: 20px;" >Proceed</button>
+                                        <!-- Add another button here if needed -->
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -469,25 +456,25 @@
     {{-- Button Addition Function --}}
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let originalInputs = document.getElementById('initialInputs').cloneNode(true);
-            let addedFieldContainers = [];
+            var originalInputs = document.getElementById('initialInputs').cloneNode(true);
+            var addedFieldContainers = [];
 
             document.getElementById('addFieldBtn').addEventListener('click', function () {
-                let newFieldsContainer = document.createElement('div');
+                var newFieldsContainer = document.createElement('div');
                 newFieldsContainer.className = 'row row-space';
 
-                let newField1 = document.createElement('div');
+                var newField1 = document.createElement('div');
                 newField1.className = 'col-6 col-sm-3 col-md-6 mb-3 d-flex align-items-center justify-content-center';
                 newField1.innerHTML = '<input type="text" class="form-control custom-input" >';
 
-                let newField2 = document.createElement('div');
+                var newField2 = document.createElement('div');
                 newField2.className = 'col-6 col-sm-3 col-md-6 mb-3 d-flex align-items-center justify-content-center';
                 newField2.innerHTML = '<input type="text" class="form-control custom-input" >';
 
                 newFieldsContainer.appendChild(newField1);
                 newFieldsContainer.appendChild(newField2);
 
-                let addButton = document.getElementById('addFieldBtn');
+                var addButton = document.getElementById('addFieldBtn');
                 addButton.parentNode.insertBefore(newFieldsContainer, addButton.parentNode.firstChild);
 
                 addedFieldContainers.push(newFieldsContainer);
@@ -496,354 +483,160 @@
 
             document.getElementById('deleteFieldBtn').addEventListener('click', function () {
                 if (addedFieldContainers.length > 0) {
-                    let lastAddedContainer = addedFieldContainers.pop();
+                    var lastAddedContainer = addedFieldContainers.pop();
                     lastAddedContainer.remove();
                     updateDeleteButton();
                 } else {
                     // When all added fields are deleted, restore the original inputs
-                    let dynamicFieldsContainer = document.getElementById('dynamicFieldsContainer');
+                    var dynamicFieldsContainer = document.getElementById('dynamicFieldsContainer');
                     dynamicFieldsContainer.innerHTML = '';
                     dynamicFieldsContainer.appendChild(originalInputs.cloneNode(true));
                 }
             });
 
             function updateDeleteButton() {
-                let deleteButton = document.getElementById('deleteFieldBtn');
+                var deleteButton = document.getElementById('deleteFieldBtn');
                 deleteButton.disabled = addedFieldContainers.length === 0;
             }
         });
     </script>
 
 
+
     {{--Own Damage Function --}}
+  
+    {{--     let ownDamageSetLimit = @json($ownDamageComputations->pluck('ownDamageSetLimit')->first());
+        let ownDamageSetRate = @json($ownDamageComputations->pluck('ownDamageSetRate')->first());
+        let ownDamageRate = ownDamageSetRate * 100; --}}
     <script>
 
-        //Fetch the value of ownDamageSetLimit from the database
-        let ownDamageSetLimit = @json($ownDamageComputations->pluck('ownDamageSetLimit')->first());
-
-        //Fetch the value of ownDamageSetRate from the database
-        let ownDamageSetRate = @json($ownDamageComputations->pluck('ownDamageSetRate')->first());
-        let ownDamageRate = ownDamageSetRate * 100; //Convert ownDamageSetRate to Decimal
-
-        // Funtion for Own Damage Limit
+   
+        let ownDamageSetLimit = 500000;
+        let ownDamageRate = 1.75;
         function validateOwnDamageLimit(input) {
-            const numericValue = Number(input.value.replace(/[^\d.]/g, '')); // Retrieve the value from an HTML input element and remove any non-numeric characters
-            const formattedValue = numericValue.toLocaleString('en-US'); //Put comma in the value
+            const numericValue = Number(input.value.replace(/[^\d.]/g, ''));
+            const formattedValue = numericValue.toLocaleString('en-US');
+            const formattedOwnDamageLimit = parseFloat(ownDamageSetLimit).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
-            // Convert ownDamageSetLimit to a formatted string with specified fraction digits Ex. 500000.000000 to 500,000
-            const formattedOwnDamageLimit = parseFloat(ownDamageSetLimit).toLocaleString('en-US',
-            {
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 2
-            });
-
-            //Check if numericValue is greater than ownDamageSetLimit
             if (numericValue > ownDamageSetLimit) {
-
-                //Show error message after the condition is met
                 input.classList.add('is-invalid');
-
-                // Show an error message for rate exceeding the value of formattedOwnDamageLimit
                 document.querySelector('.odt-invalid-inputs').innerText = `Please enter a value less than or equal to ${formattedOwnDamageLimit}`;
-
             } else {
-
-                //Remove error message after clearing the inputted value
                 input.classList.remove('is-invalid');
-
-                // Remove the error message for rate exceeding the value of formattedOwnDamageLimit
                 document.querySelector('.odt-invalid-inputs').innerText = '';
-
             }
 
             // Update input value with formatted value
             input.value = formattedValue;
         }
 
-        // Funtion for Own Damage Rate
         function validateOwnDamageRate(input) {
-            let value = input.value.trim(); // Remove leading/trailing spaces in inputted value
-            let parsedValue = parseFloat(value); // Parse the trimmed value to a floating-point number
+            var value = input.value.trim(); // Remove leading/trailing spaces
+            var parsedValue = parseFloat(value);
+            const formattedOwnDamageRate = parseFloat(ownDamageRate).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 
-            // Convert ownDamageSetRate to a formatted string with specified digits Ex. 0.018(0.017500000) to  1.75
-            const formattedOwnDamageRate = parseFloat(ownDamageRate).toLocaleString('en-US');
-
-            //!isNaN function check if the parsedValue is really a number
             if (!isNaN(parsedValue)) {
-
-                //Check if parsedValue is greater than formattedOwnDamageRate
                 if (parsedValue > formattedOwnDamageRate) {
-
-                    //Show error message after the condition is met
                     input.classList.add('is-invalid');
-
-                    // Show an error message for rate exceeding the value of formattedOwnDamageRate
+                    // Show an error message for rate exceeding 100
                     document.querySelector('.odtrate-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + formattedOwnDamageRate + '%';
-
                 } else {
-
-                    //Remove error message after clearing the inputted value
                     input.classList.remove('is-invalid');
-
-                    // Remove the error message for rate exceeding the value of formattedOwnDamageLimit
                     document.querySelector('.odtrate-invalid-inputs').innerText = '';
                 }
-
-            } else if (value === ''){
-                // If parsedValue is empty (input field is empty)
-                // Remove error styling and message for empty input
+            } else {
                 input.classList.remove('is-invalid');
-                document.querySelector('.odtrate-invalid-inputs').innerText = '';
-
-            }
-
-            else {
-                //Show error message after the condition is met
-                input.classList.add('is-invalid');
-
                 // Show an error message for invalid input
-                document.querySelector('.odtrate-invalid-inputs').innerText = 'Please enter only numeric values in this field.';
+                document.querySelector('.odtrate-invalid-inputs').innerText = '';
             }
         }
 
-        // Funtion to convert the value of ODT from Decimal to Percent
-        function convertToDecimalPercentageODT() {
-            let input = document.getElementById('odt_rate'); //get the inputted value
-            let value = input.value.trim(); // Remove leading/trailing spaces
-            let parsedValue = parseFloat(value);
+        document.getElementById('odt_rate').addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                validateOwnDamageRate(this); // Check the rate validity
+                var value = this.value.trim(); // Remove leading/trailing spaces
+                var parsedValue = parseFloat(value);
+                if (!isNaN(parsedValue) && parsedValue <= ownDamageRate) {
+                    convertToDecimalPercentageODT();
+                }
+            } else {
+                validateOwnDamageRate(this); // Call the rate validation function on each keyup event
+            }
+        });
 
-            //convert it to percentage
+        function convertToDecimalPercentageODT() {
+            var input = document.getElementById('odt_rate');
+            var value = input.value.trim(); // Remove leading/trailing spaces
+            var parsedValue = parseFloat(value);
+
             if (!isNaN(parsedValue)) {
-                let decimalValue = parsedValue / 100;
+                var decimalValue = parsedValue / 100;
                 input.value = parsedValue + '%';
                 decimalValue.toFixed(4);
                 calculatePremiumDueODT(decimalValue);
             }
-
         }
 
-        //Calculate the Premium due of the Own Damage / Theft
         function calculatePremiumDueODT(decimalValue) {
-            let limit = parseFloat(document.getElementById('odt_limit').value.replace(/\D/g, ''));
+            var limit = parseFloat(document.getElementById('odt_limit').value.replace(/\D/g, ''));
 
             if (!isNaN(limit) && !isNaN(decimalValue)) {
-                let premiumDue = (limit * decimalValue).toFixed(2);
+                var premiumDue = (limit * decimalValue).toFixed(2);
                 document.getElementById('odt_premium_due').value = parseFloat(premiumDue).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             }
         }
 
-        //Show the Value of the premium due and put a percent sign in the rate when pressing enter
-        document.getElementById('odt_rate').addEventListener('change', function (event) {
-            validateOwnDamageRate(this); // Check the rate validity
-            let value = this.value.trim(); // Remove leading/trailing spaces
-            let parsedValue = parseFloat(value);
-
-            if (!isNaN(parsedValue) && parsedValue <= ownDamageRate) {
-                convertToDecimalPercentageODT();
-            }
-        });
-
     </script>
-
-    {{--Bodily Injury Function --}}
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var select = document.getElementById("bi_limit");
-            var biPremiumDueInput = document.getElementById("bi_premium_due");
-
-            for (var i = 0; i < select.options.length; i++) {
-                var value = select.options[i].value;
-                if (!isNaN(value)) {
-                    select.options[i].text = formatNumber(value);
-                }
-            }
-
-            function formatNumber(number) {
-                return new Intl.NumberFormat('en-US').format(parseInt(number).toFixed(0));
-            }
-
-            select.addEventListener("change", function() {
-                var selectedLimit = parseFloat(this.value);
-                var selectedRate = parseFloat(this.options[this.selectedIndex].getAttribute("data-rate"));
-
-                var premiumDue = selectedLimit * selectedRate;
-                biPremiumDueInput.value = premiumDue.toLocaleString('en-US',
-                { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-
-            });
-        });
-    </script>
-
-    {{-- Property Damage Function --}}
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var select = document.getElementById("pd_limit");
-            var biPremiumDueInput = document.getElementById("pd_premium_due");
-
-            for (var i = 0; i < select.options.length; i++) {
-                var value = select.options[i].value;
-                if (!isNaN(value)) {
-                    select.options[i].text = formatNumber(value);
-                }
-            }
-
-            function formatNumber(number) {
-                return new Intl.NumberFormat('en-US').format(parseInt(number).toFixed(0));
-            }
-
-            select.addEventListener("change", function() {
-                var selectedLimit = parseFloat(this.value);
-                var selectedRate = parseFloat(this.options[this.selectedIndex].getAttribute("data-rate"));
-
-                var premiumDue = selectedLimit * selectedRate;
-                biPremiumDueInput.value = premiumDue.toLocaleString('en-US',
-                { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let apsLimit = document.getElementById("aps_limit");
-            let seatingCapacity = document.getElementById("aps_seating_capacity");
-            let apsPremiumDueInput = document.getElementById("aps_premium_due");
-
-            // Formatting the apsLimit value and updating the input field with the formatted result
-            let formattedApsLimit = parseFloat(apsLimit.value).toLocaleString('en-US', {
-                style: 'decimal',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 2
-            });
-
-            apsLimit.value = formattedApsLimit;
-
-            function calculateApsPremiumDue() {
-                let limit = parseFloat(apsLimit.value.replace(/\D/g, ''));
-                let premiumDue = (limit * parseFloat(seatingCapacity.value)).toFixed(2);
-                apsPremiumDueInput.value = parseFloat(premiumDue).toLocaleString('en-US', {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2
-                });
-            }
-
-            apsLimit.addEventListener('change', calculateApsPremiumDue);
-            seatingCapacity.addEventListener('change', calculateApsPremiumDue);
-        });
-    </script>
-
-
-
 
 
     {{-- AOG Functions --}}
     <script>
 
-        //Fetch the value of ownDamageSetLimit from the database
-        let aogSetLimit = @json($aogComputations->pluck('aogSetLimit')->first());
-        let aogSetRate = @json($aogComputations->pluck('aogSetRate')->first());
-        let aogRate = aogSetRate * 100; //Convert ownDamageSetRate to Decimal
-
+        let aogSetLimit = 300000.000000000;
+        
 
         function validateAogLimit(input) {
-            const numericValue = Number(input.value.replace(/[^\d.]/g, ''));
-            const formattedValue = numericValue.toLocaleString('en-US');
+            var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+            var formattedValue = Number(value).toLocaleString('en-US'); // Format to have commas
 
-            const formattedAOGLimit = parseFloat(aogSetLimit).toLocaleString('en-US',
-            {
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 2
+
+                if (value > aogSetLimit) {
+                    input.classList.add('is-invalid');
+                    document.querySelector('.aog-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + aogSetLimit.toLocaleString('en-US');
+                } else {
+                    input.classList.remove('is-invalid');
+                document.querySelector('.aog-invalid-inputs').innerText = '';                }
+
+                input.value = formattedValue;
+            }
+
+            document.getElementById('aog_rate').addEventListener('keyup', function (event) {
+                if (event.key === 'Enter') {
+                    convertToDecimalPercentage();
+                }
             });
 
-            if (numericValue > aogSetLimit) {
+            function convertToDecimalPercentage() {
+                var input = document.getElementById('aog_rate');
+                var value = input.value.trim(); // Remove leading/trailing spaces
+                var parsedValue = parseFloat(value);
 
-                input.classList.add('is-invalid');
-                document.querySelector('.aog-invalid-inputs').innerText = `Please enter a value less than or equal to ${formattedAOGLimit}`;
-
-            } else {
-
-                input.classList.remove('is-invalid');
-                document.querySelector('.aog-invalid-inputs').innerText = '';
-
-            }
-
-            input.value = formattedValue;
-        }
-
-        function validateAogRate(input) {
-            let value = input.value.trim();
-            let parsedValue = parseFloat(value);
-
-            const formattedAOGRate = parseFloat(aogRate).toLocaleString('en-US');
-
-            if (!isNaN(parsedValue)) {
-
-                if (parsedValue > formattedAOGRate) {
-
-                    input.classList.add('is-invalid');
-                    document.querySelector('.aograte-invalid-inputs').innerText = 'Please enter a value less than or equal to ' + formattedAOGRate + '%';
-
-                } else {
-
-                    input.classList.remove('is-invalid');
-                    document.querySelector('.aograte-invalid-inputs').innerText = '';
-
+                if (!isNaN(parsedValue)) {
+                    var decimalValue = parsedValue / 100;
+                    input.value = parsedValue + '%';
+                    decimalValue.toFixed(4);
+                    calculatePremiumDue(decimalValue);
                 }
-
-            } else if (value === ''){
-                input.classList.remove('is-invalid');
-                document.querySelector('.aograte-invalid-inputs').innerText = '';
-
             }
 
-            else {
-                input.classList.add('is-invalid');
-                document.querySelector('.aograte-invalid-inputs').innerText = 'Please enter only numeric values in this field.';
+            function calculatePremiumDue(decimalValue) {
+                var limit = parseFloat(document.getElementById('aog_limit').value.replace(/\D/g, ''));
+
+                if (!isNaN(limit) && !isNaN(decimalValue)) {
+                    var premiumDue = (limit * decimalValue).toFixed(4);
+                    document.getElementById('aog_premium_due').value = premiumDue;
+                }
             }
-        }
-
-        function convertToDecimalPercentageAOG() {
-            let input = document.getElementById('aog_rate');
-            let value = input.value.trim();
-            let parsedValue = parseFloat(value);
-
-            //convert it to percentage
-            if (!isNaN(parsedValue)) {
-                let decimalValue = parsedValue / 100;
-                input.value = parsedValue + '%';
-                decimalValue.toFixed(4);
-                calculatePremiumDueAOG(decimalValue);
-            }
-
-        }
-
-        //Calculate the Premium due of the Own Damage / Theft
-        function calculatePremiumDueAOG(decimalValue) {
-            let limit = parseFloat(document.getElementById('aog_limit').value.replace(/\D/g, ''));
-
-            if (!isNaN(limit) && !isNaN(decimalValue)) {
-                let premiumDue = (limit * decimalValue).toFixed(2);
-                document.getElementById('aog_premium_due').value = parseFloat(premiumDue).toLocaleString('en-US',
-                {
-                    minimumFractionDigits: 2, maximumFractionDigits: 2
-                });
-            }
-        }
-
-        document.getElementById('aog_rate').addEventListener('change', function (event) {
-
-            validateAogRate(this);
-            let value = this.value.trim();
-            let parsedValue = parseFloat(value);
-            if (!isNaN(parsedValue) && parsedValue <= aogRate) {
-                convertToDecimalPercentageAOG();
-            }
-
-        });
-
-
 
 
     </script>
