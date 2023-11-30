@@ -75,7 +75,7 @@
                         <div class="row row-space">
                             <div class="col-md-12 mb-3">
                                 <label class="input-label label">Insured’s Full Name</label>
-                                <input type="text" id="insured_full_name" name="insured_full_name" class="form-control custom-input" >
+                                <input type="text" id="insured_full_name" name="insured_full_name" class="form-control " style=" background: #E4E4E4;" >
                                 @error('insured_full_name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -416,6 +416,9 @@
                             </div>
                         </div>
 
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-danger mt-3">Submit</button>
+                            </div>
 
                         </div>
 
