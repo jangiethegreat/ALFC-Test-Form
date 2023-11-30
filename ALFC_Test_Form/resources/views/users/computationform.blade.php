@@ -356,11 +356,11 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-md-12 text-right">
-                                                <button class="btn btn-danger" id="addFieldBtn">Add</button>
+                                                
                                                 <button class="btn btn-secondary ml-2" id="deleteFieldBtn" style="background-color: transparent; border: none; color: red;" onclick="this.blur()" disabled>
                                                     Delete
                                                 </button>
-
+                                                <button class="btn  btn-danger " style="border-radius:20px;"id="addFieldBtn">Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -415,10 +415,12 @@
                                 </div>
                             </div>
                         </div>
-
+                            <!-- button trigger for modal -->
                             <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-danger mt-3" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                                <button type="submit" class="btn btn-danger mt-3" style="border-radius:20px;" data-toggle="modal" data-target="#exampleModal">Submit</button>
                             </div>
+
+                            <!-- Modal for Confirmation -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
