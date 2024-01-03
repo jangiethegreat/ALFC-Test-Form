@@ -40,107 +40,46 @@
 <h2 style="text-align: center; color: #332727; font-family: Montserrat; font-size: 40px; font-weight: 700; margin-top: 45px; margin-bottom: 50px;">
     Insurances for FGEN
 </h2>
-<div class = "container-fluid d-md-block d-none">
-    <div class="row justify-content-center">
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="ol-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-2 col-sm-2 mb-3  d-flex justify-content-center">            
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3  d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3  d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3  d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="col-md-2 col-sm-2 mb-3  d-flex justify-content-center"></div>
-       
-    </div>
-   
-</div>
+<?php
+// Assuming $images is an array of image paths or objects with image properties.
+$images = [
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    ['image' => 'assets/fgen.png'],
+    // ... more items
+];
 
-<div class = "container d-md-none">
+// Split the array into chunks of 5.
+$rows = array_chunk($images, 5);
+?>
+
+<!-- Iterate over each row -->
+<?php foreach ($rows as $row): ?>
     <div class="row justify-content-center">
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card"  style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">           
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">            
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="card" style="background-image: url({{ asset('assets/fgen.png') }});"></div>
-        </div>
-        <div class="cardView col-4 col-sm-4 col-md-2 mb-3 d-flex justify-content-center"></div>
-       
+        <!-- Iterate over each image within the row -->
+        <?php foreach ($row as $item): ?>
+            <div class="col-md-2 col-sm-2 mb-3 d-flex justify-content-center">
+                <div class="card" style="background-image: url({{ asset('<?= $item['image'] ?>') }});"></div>
+            </div>
+        <?php endforeach; ?>
     </div>
-   
-</div>
+<?php endforeach; ?>
 
 @endsection

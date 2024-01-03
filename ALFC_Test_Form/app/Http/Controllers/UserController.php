@@ -44,11 +44,11 @@ class UserController extends Controller
     }
 
     public function fetchData()
-{
-    $data = DummyData::all();
-    return datatables()->of($data)->toJson();
+    {
+        $data = DummyData::all();
+        return datatables()->of($data)->toJson();
 
-}
+    }
 
 
     
