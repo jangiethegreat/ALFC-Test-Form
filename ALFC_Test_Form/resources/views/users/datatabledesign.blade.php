@@ -129,8 +129,8 @@
                             render: function(data, type, row) {
                                 return '<span class="adjustable-cell">' + row.Company + '<br>' + '<span style="font-size: 10px; color: gray;">'+row.Position +'</span>';
                             },
-                            name: 'Birthdate', 
-                            title: 'Birthdate' 
+                            name: 'Company', 
+                            title: 'Company' 
                         },
                         {
                             data: null,
